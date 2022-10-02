@@ -1,0 +1,117 @@
+
+<head>
+	<title>music-rungis</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+{% block navigation %}
+<br>
+	<p>Les fonctions de navigation permettent de parcourir les périodes de l'année.
+		Il existe deux modes de navigation : le mode hebdomadaire et le mode mensuel. 
+		Il est possible de passer d'un mode à l'autre par un bouton "va-et-vient" qui affiche toujours l'autre mode disponible.
+		Le bouton de "va-et-vient" est situé en haut et à gauche de la page des réservations.
+		Si le mode d'affichage est hebdomadaire, le bouton "va-et-vient" affiche "mensuel". Si le mode d'affichage est mensuel, le bouton "va-et-vient" affiche "hebdomadaire" </p>
+	<br>
+	<table>
+		  	<thead>
+        		<tr>
+            		<th>Titre du test</th>
+            		<th>Actions</th>
+            		<th>Vérifications</th>
+            		<th>Version</th>
+            		<th>Résultats</th>
+        		</tr>
+    		</thead>
+    		<tbody>
+    		
+		        <tr>
+		            <td>Navigation Hebdomadaire - Reload</td>
+		            <td>Passez à la semaine suivante, puis cliquez sur le bouton Reload</td>
+		            <td>La semaine courante est de nouveau affichée</td>
+		            <td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		            <td>Navigation Hebdomadaire - Reload</td>
+		            <td>Passez à la semaine précédente, puis cliquez sur le bouton Reload</td>
+		            <td>La semaine courante est de nouveau affichée</td>
+		            <td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		            <td>Navigation Hebdomadaire - passage présentation hebdomadaire -> mensuelle</td>
+		            <td>En mode navigation Hebdomadaire, cliquez sur le bouton Mensuel</td>
+		            <td>La visualisation passe en mode mensuel et le mois courant est affiché</td>
+		            <td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		            <td>Navigation Hebdomadaire -> Vérification des périodes</td>
+		            <td>En mode navigation Hebdomadaire, vérifiez les jours affichés</td>
+		            <td>Les jours du lundi au vendredi sont affichés</td>
+		            <td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		            <td>Navigation Hebdomadaire -> Vérification des heures visualisées</td>
+		            <td>En mode navigation Hebdomadaire, vérifiez les heures visualisées</td>
+		            <td>Les heures de 9h00 à 18h00 inclus sont affichées</td>
+		            <td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr></tr>
+		        <tr></tr>
+		        
+        		<tr>
+            		<th>Titre du test</th>
+            		<th>Actions</th>
+            		<th>Vérifications</th>
+            		<th>Version</th>
+            		<th>Résultats</th>
+        		</tr>
+		
+				<tr>
+		            <td>Navigation Mensuelle - Reload</td>
+		            <td>Passez au mois suivant, puis cliquez sur le bouton Reload</td>
+		            <td>Le mois courant est de nouveau affiché</td>
+		            <td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		            <td>Navigation Mensuelle - Reload</td>
+		            <td>Passez au mois précédent, puis cliquez sur le bouton Reload</td>
+		            <td>Le mois courant est de nouveau affiché</td>
+		            <td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		       	<tr>
+		            <td>Navigation Mensuelle - passage de Mensuel -> Hebdomadaire</td>
+		            <td>En mode navigation Mensuelle, cliquez sur le bouton Hebdomadaire</td>
+		            <td>La visualisation passe en mode hebdomadaire et la semaine courante est affichée</td>
+		            <td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		            <td>Navigation Mensuelle -> Vérification des périodes</td>
+		            <td>En mode navigation Mensuelle, vérifier les semaines affichés</td>
+		            <td>Toutes les semaines qui contiennent un jour du mois du mois courant (complètes ou incomplètes) sont visualisées</td>
+		            <td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+
+
+
+        
+		        
+		        
+		  	</tbody>
+	</table>
+	
+{% endblock navigation  %}

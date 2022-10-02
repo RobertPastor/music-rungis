@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<link type="text/css" rel="stylesheet" href="/static/partitions/css/partitions.css" />
+	<link type="text/css" rel="stylesheet" href="/static/partitions/css/jquery/table-sorter-styles.css" />
+	
+	<script type="text/javascript" src="/static/partitions/js/jquery/jquery.tablesorter.js"></script> 
+	<script type="text/javascript" src="/static/partitions/js/partitions.js"></script>
+	
+</head>
+<body>
+	<br>
+	<div>
+		<span class="intro">Cette page est dédiée à l'échange de partitions.</span>
+	</div>
+	<br>
+	<table id="buttons" border="0">
+		<tr>
+			<td>
+				<div>
+					<button id="button_new_partition" class="new" onclick="add_new_partition()">Ajouter une nouvelle partition</button> 
+				</div>
+			</td>
+			<td>
+				<div>
+					<button id="button_record_new_partition" class="new" onclick="record_new_partition()">Enregistrer une nouvelle partition</button> 
+				</div>
+			</td>
+			<td>
+				<div>
+					<a href="/" class="small">Retour à la page principale</a> 
+				</div>
+			</td>
+		</tr>
+	</table>
+	
+	<br>
+	<div id="table_new_partition" class="new">
+		<table class="new_partition">
+			<thead>
+				<tr>
+					<th>Artiste</th>
+					<th>Titre</th>
+					<th>Support papier</th>
+					<th>Support électronique</th>
+					<th>Type (tablature, PVG)</th>
+					<th>Hyperlien</th>
+					<th>Commentaires</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<div class="marging">
+							<input id="new_partition_artist" class="small" onkeyup="newPartitionOnChange()">
+						</div>
+					</td>
+					<td>
+						<div class="marging">
+							<input id="new_partition_name" class="small" onKeyUp="newPartitionOnChange()">
+						</div>
+					</td>
+				    <td><input id="new_partition_paper" class="small" type="checkbox" onChange="newPartitionOnChange()"></td>
+				    <td><input id="new_partition_electronic" type="checkbox" onChange="newPartitionOnChange()"></td>
+				    <td>
+				    	<select class="small" id="new_partition_type" onChange="newPartitionOnChange()"><option class="small">TAB</option><option class="small">PVG</option></select>
+				    </td>
+				    <td>
+				    	<div class="marging">
+				    		<input id="new_partition_url" class="small" type="url" onChange="newPartitionOnChange()">
+				    	</div>
+				    </td>
+				    <td>
+				    	<div class="marging">
+				    		<input id="new_partition_comments" class="small" type="text" onChange="newPartitionOnChange()">
+				    	</div>
+				    </td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			<br>
+			<span class="small">L'enregistrement d'une nouvelle partition est possible dès qu'un artiste et un nom de morceau ont été saisis.</span>
+			<span class="small">La saisie d'un artiste ou d'un titre agit comme un filtre sur le contenu du tableau ci-dessous.</span>
+		</div>
+	<br>
+	</div>
+	<br>
+	<div>
+		<span class="small">Cliquer sur un en-tête de tableau pour modifier le tri des colonnes selon l'ordre de la colonne sélectionnée.</span>
+		<span class="small">Cliquer sur une croix pour supprimer une partition.</span>
+		<span class="small">Cliquer dans une edit box pour modifier un attribut d'une partition et cliquer hors de l'edit box pour enregistrer les changements.</span>
+	</div>
+	<div>
+		{% if partitions|length > 0 %}
+			<table id="partitions" class="tablesorter" >
+				<thead>
+					<tr>
+						<th title="cliquez pour modifier le tri">id</th>
+						<th class="hidden">primary key</th>
+						<th title="cliquez pour modifier le tri">Artiste</th>
+						<th title="cliquez pour modifier le tri">Titre</th>
+						<th title="cliquez pour modifier le tri">Propriétaire</th>
+						<th title="cliquez pour modifier le tri">Support<br>papier</th>
+						<th title="cliquez pour modifier le tri">Support<br>électronique</th>
+						<th title="cliquez pour modifier le tri">Type<br>(tablature, PVG)</th>
+						<th title="cliquez pour modifier le tri">Hyperlien</th>
+						<th title="cliquez pour modifier le tri">Commentaires</th>
+					</tr>
+				</thead>
+			
+			    <tbody>
+			   		{% for partition in partitions %}
+			   			<tr id="{{partition.pk}}">
+			   			
+			   				{% if user == partition.owner %}
+					    		<td>
+					    			<span class="small">{{ forloop.counter }}</span>
+					    			<a class="delete_partition" onclick="delete_partition(this)" title="cliquez pour supprimer la partition">
+					    				<img class="delete_partition" border="0" alt="delete" src="/static/partitions/images/delete.png" />
+					    			</a>
+					    		</td>
+					    	{% else %}
+					    		<td>{{ forloop.counter }}</td>
+					    	{% endif %}
+					    	
+				    		<td class="hidden" id="partition_pk">{{ partition.pk }}</td>
+				    		
+				    		{% if user == partition.owner %}
+				    			<td id="td_partition_artist_filter">
+				    				<span id="partition_artist_filter" class="hidden">{{ partition.artist }}</span>
+				    				<input type="text" id="partition_artist" class="small" value="{{ partition.artist }}" title="saisissez les changements puis cliquez hors de la zone" onChange="detail_change(this)" />
+				    			</td>
+				    		{% else %}
+				    			<td id="td_partition_artist_filter">
+				    				<span id="partition_artist_filter">{{ partition.artist }}</span>
+				    			</td>
+				    		{% endif %}
+				    		
+				    		{% if user == partition.owner %}
+				    			<td id="td_partition_name_filter">
+				    				<span class="hidden">{{ partition.name }}</span>
+				    				<input type="text" id="partition_name" class="small" value="{{ partition.name }}" title="saisissez les changements puis cliquez hors de la zone" onChange="detail_change(this)" />
+				    			</td>
+				    		{% else %}
+					    		<td id="td_partition_name_filter">
+					    			<span>{{ partition.name }}</span>
+					    		</td>
+					    	{% endif %}
+					    	
+				    		<td>{{ partition.owner.first_name }} {{ partition.owner.last_name }}</td>
+				    		
+				    		{% if user == partition.owner %}
+				    			<td>
+				    				<span class="hidden">{% if partition.paper %}1{% else %}0{% endif %}</span>
+				    				<input id="partition_paper" type="checkbox" name="paper" {% if partition.paper %}checked="checked"{% endif %} title="cliquez pour modifier" onChange="detail_change(this)">
+				    			</td>
+				    			<td>
+				    				<span class="hidden">{% if partition.electronic %}1{% else %}0{% endif %}</span>
+				    				<input id="partition_electronic" type="checkbox" name="electronic" {% if partition.electronic %}checked="checked"{% endif %} title="cliquez pour modifier" onChange="detail_change(this)" >
+				    			</td>
+				    		{% else %}
+					    		<td>
+					    			<span class="hidden">{% if partition.paper %}1{% else %}0{% endif %}</span>
+					    			<input id="partition_paper" type="checkbox" name="paper" {% if partition.paper %}checked="checked"{% endif %} disabled>
+					    		</td>
+					    		<td>
+					    			<span class="hidden">{% if partition.electronic %}1{% else %}0{% endif %}</span>
+					  				<input id="partition_electronic" type="checkbox" name="electronic" {% if partition.electronic %}checked="checked"{% endif %} disabled>
+					    		</td>
+					    	{% endif %}
+				    		
+				    		{% if user == partition.owner %}
+				    			<td>
+				    				<span class="hidden">{{ partition.partitionType }}</span>
+				    				<select class="small" id="partition_type" onChange="detail_change(this)" title="cliquez pour modifier">
+				    				{% if partition.partitionType == 'TAB' %}
+					    				<option class="small" selected>TAB</option>
+					    				<option class="small">PVG</option>
+					    			{% elif  partition.partitionType == 'PVG' %}
+					    				<option class="small">TAB</option>
+					    				<option class="small"selected>PVG</option>					    			
+					    			{% else %}
+					    				<option class="small">NONE</option>
+					    				<option class="small">TAB</option>
+					    				<option class="small">PVG</option>
+					    			{% endif %}
+					    			</select>
+				    			</td>
+				    		{% else %}
+				    			<td>{{ partition.partitionType }}</td>
+				    		{% endif %}
+				    		
+				    		{% if user == partition.owner %}
+				    			<td>
+				    				<span class="hidden">{{ partition.url }}</span>
+				    				<a href="{{partition.url}}" target="_blank">{{partition.url}}</a>
+				    				<br>
+				    				<input type="text" id="partition_url" class="small" value="{{ partition.url }}" onChange="detail_change(this)" title="saisissez les changements puis cliquez hors de la zone"/>
+				    			</td>
+				    		{% else %}
+				    			<td>
+				    				<a href="{{partition.url}}" target="_blank">{{partition.url}}</a>
+				    			</td>
+				    		{% endif %}
+				    		
+				    		{% if user == partition.owner %}
+				    			<td>
+				    				<span class="hidden">{{ partition.comments }}</span>
+				    				<input type="text" id="partition_comments" class="small" value="{{ partition.comments}}" onChange="detail_change(this)" title="saisissez les changements puis cliquez hors de la zone"/>
+				    			</td>
+				    		{% else %}
+					    		<td>{{ partition.comments }}</td>
+					    	{% endif %}
+					    	
+			    		</tr>
+			    	{% endfor %}
+			    </tbody>
+		    </table>
+		{% else %}
+		    <h1>There are no partitions to display</h1>
+		{% endif %}
+	</div>
+
+	<div id="overlay" class="overlay">
+		<img class="loading-indicator" />
+	</div>
+</body>
+
+
+{% endblock content %}

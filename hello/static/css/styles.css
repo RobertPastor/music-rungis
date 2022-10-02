@@ -1,0 +1,93 @@
+.small {
+	font: 10px calibri, sans-serif;
+	font-weight: italic;
+	text-align: left;
+}
+
+.silverLeft {
+	font				: 	9px calibri, sans-serif;
+	background-color 	: 	silver;
+	text-align			:	left;
+}
+
+.informations {
+	background-color:  lime;
+}
+
+.padding {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.nobold {
+	font				: 	14px calibri, sans-serif;
+	background-color	:	lime;
+}
+.bold {
+	font				: 	14px calibri, sans-serif;
+	font-weight			: 	bold;
+	background-color	:	dodgerblue;
+}
+
+.center {
+	font			: 	18px calibri, sans-serif;
+	font-weight		: 	bold;
+	text-align		: 	center;
+}
+
+a.btn.btn-blue {
+	background-color	: #699DB6;
+	border-color		: rgba(0,0,0,0.3);
+	text-shadow			: 0 1px 0 rgba(0,0,0,0.5);
+	color				: #FFF;
+}
+
+a.btn {
+	display				: inline-block;
+	color				: #666;
+	background-color	: #eee;
+	letter-spacing		: 2px;
+	font-size			: 14px;
+	padding				: 10px 30px;
+	border-radius		: 5px;
+	-moz-border-radius	: 5px;
+	-webkit-border-radius: 5px;
+	border				: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+}
+
+a.btn:hover {
+	color				: black;
+	background-color	: #e3e3e3;
+	border-color		: rgba(0,0,0,0.5);
+}
+
+.glyphicon{
+	position				:relative;
+	top						:	1px;
+	display					:inline-block;
+	font-family				:'Glyphicons Halflings';
+	font-style				:normal;
+	font-weight				:400;
+	line-height				:1;
+	-webkit-font-smoothing	:antialiased;
+	-moz-osx-font-smoothing	:grayscale
+}
+
+.lang-logo {
+        display				: block;
+        background			: #b01302;
+        border-radius		: 50%;
+        overflow			: hidden;
+        width				: 200px;
+        height				: 200px;
+        margin				: auto;
+        border				: 2px solid white
+  }
+  
+.commission {
+	display			:	block;
+	width			:	100%;
+ 	margin			: 	auto;
+    margin			: 	auto;
+  }
+    

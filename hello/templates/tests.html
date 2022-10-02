@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/tests.css' %}" />
+	<script type="text/javascript" src="/static/js/tests.js"></script>
+	
+</head>
+
+<div class="jumbotron text-center">
+	
+	<h2><a href="{% url 'index' %}">Tests</a></h2>
+	  <div class="container">
+	  	
+	  	<table>
+	  		<tr>
+	  			<td class="tablink"><button class="tablink" onclick="openPage('Home', this, 'black')">Home</button></td>
+	  			<td><button class="tablink" onclick="openPage('Reservations', this, 'green')" id="defaultOpen">Réservations</button></td>
+	  			<td><button class="tablink" onclick="openPage('MenuContextuel', this, 'cyan')">Réservations - Menu Contextuel</button></td>
+	  			<td><button class="tablink" onclick="openPage('Navigation', this, 'orange')">Changement de Période</button></td>
+	  			<td><button class="tablink" onclick="openPage('SiteMessages', this, 'pink')">Messages du Site</button></td>
+	  			<td><button class="tablink" onclick="openPage('Partitions', this, 'cyan')">Partitions</button></td>
+	  			
+	  			
+	  		</tr>
+	  	</table>
+	  	
+		<div id="Home" class="tabcontent">
+		  <h3>Home</h3>
+		  <p>Home is where anything starts...</p>
+		</div>
+		
+		<div id="Navigation" class="tabcontent">
+		  
+			{% block navigation %}
+   				{% include "tests/navigation.html" %}
+			{% endblock %}
+		  
+		</div> 
+		
+		<div id="Reservations" class="tabcontent">
+		
+			{% block reservations %}
+	   			{% include "tests/reservations.html" %}
+			{% endblock %}
+		  
+		</div>
+		
+		<div id="MenuContextuel" class="tabcontent">
+
+			{% block menu_contextuel %}
+	   			{% include "tests/menu_contextuel.html" %}
+			{% endblock %}		
+			
+		</div>
+		
+		<div id="SiteMessages" class="tabcontent">
+		  
+			{% block site_messages %}
+   				{% include "tests/site_messages.html" %}
+			{% endblock %}
+		  
+		</div> 
+		
+		<div id="Partitions" class="tabcontent">
+		  <h3>Partitions</h3>
+		  <p>à compléter.</p>
+		</div>
+
+	  </div>
+</div>
+{% endblock content  %}

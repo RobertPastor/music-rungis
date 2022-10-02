@@ -1,0 +1,255 @@
+.grey {
+	background-color : cyan;
+}
+.small {
+	font: 10px calibri, sans-serif;
+	text-align: left;
+}
+.hours {
+	font: 11px calibri, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	background-color:	#21825B;
+}
+.weekNumber , .year {
+	font: 14px calibri, sans-serif;
+	font-weight: bold;
+	background-color : #36D695;
+	text-align: center;
+}
+.day {
+	font		: 12px calibri, sans-serif;
+	font-weight	: bold;
+}
+
+.select {
+	font: 10px calibri, sans-serif;
+}
+
+.silver {
+	font: 11px calibri, sans-serif;
+	background-color : silver;
+}
+
+.header {
+	font: 16px calibri, sans-serif;
+	background-color : #60D6A7;
+	font-weight: bold;
+	text-align: center;
+}
+
+.gold {
+	font: 12px calibri, sans-serif;
+	font-weight: 		bold;
+	background-color : 	gold;
+	text-align: 		center;
+}
+.song {
+	font: 12px calibri, sans-serif;
+	font-weight: 		bold;
+	background-color : 	#5FD4B1;
+	text-align: 		center;
+}
+table {
+	width: 100%;
+}
+
+th {
+	background-color : #00A876;
+}
+
+div.center {
+	font: 11px calibri, sans-serif;
+	text-align: center;
+}
+
+IMG.displayed {
+    display: 		block;
+    margin-left: 	auto;
+    margin-right: 	auto;
+    background-color : lime;
+}
+
+.question_mark_bg {
+	background-color:	#60D6A7;
+}
+
+.excel-icon {
+	background:         url('/static/reservation/images/Excel-icon.png');
+	background-color:	#60D6A7;
+    background-repeat:  no-repeat;
+    height:             24px;
+    width:              24px;
+    margin:             0 auto 0 auto;		
+}
+
+.question_mark {
+	background:         url('/static/reservation/images/question-mark.png');
+    background-color:	#60D6A7;
+    background-repeat:  no-repeat;
+    cursor:             pointer;
+    height:             64px;
+    width:              64px;
+    margin:             0 auto 0 auto;	
+}
+
+.next_week {
+    background:         url('/static/reservation/images/right-arrow.png');
+    background-color:	white;
+    background-repeat:  no-repeat;
+    cursor:             pointer;
+    height:             73px;
+    width:              128px;
+    margin:             0 auto 0 auto;	
+}
+
+.next_week:hover {
+    background:         url('/static/reservation/images/right-arrow.png');
+    background-color:	yellow;
+    background-repeat:  no-repeat;
+    cursor:             pointer;
+    height:             73px;
+    width:              128px;
+    margin:             0 auto 0 auto;	
+}
+
+.previous_week {
+	background:         url('/static/reservation/images/left-arrow.png');
+	background-color:	white;
+    background-repeat:  no-repeat;
+    cursor:             pointer;
+    height:             73px;
+    width:              128px;
+    margin:             0 auto 0 auto;		
+}
+
+.previous_week:hover {
+	background:         url('/static/reservation/images/left-arrow.png');
+	background-color:	yellow;
+    background-repeat:  no-repeat;
+    cursor:             pointer;
+    height:             73px;
+    width:              128px;
+    margin:             0 auto 0 auto;		
+}
+
+#btnPreviousWeek:hover , #btnNextWeek:hover {
+	
+	background-color 	: lime;
+	font-weight			: bold;
+}
+
+.previous_week:hover {
+	background-color:	yellow;
+}
+.next_week:hover {
+	background-color:	yellow;
+}
+
+.dayHourCell {
+	background-color	:	#60D6A7;
+}
+
+.container{
+    display				:	flex;
+    background-color	:	#60D6A7;
+}
+
+.slot {
+	flex-grow: 1;
+}
+
+.reservation {
+	width: 				100%;
+	background-color:	#5FD4B1;
+}
+
+.delete {
+	background:         url('/static/reservation/images/delete.png');
+	background-color:	yellow;
+    background-size:    16px;
+    background-repeat:  no-repeat;
+    cursor:             pointer;
+    height:             16px;
+    width:              16px;
+    margin:             0 auto 0 auto;
+}
+.StudioOne {
+	background:         url('/static/reservation/images/StudioOne.png');
+    background-size:    16px;
+    background-repeat:  no-repeat;
+    cursor:             pointer;
+    height:             16px;
+    width:              16px;
+    margin:             0 auto 0 auto;
+}
+
+.StudioTwo {
+	background:         url('/static/reservation/images/StudioTwo.png');
+    background-size:    16px;
+    background-repeat:  no-repeat;
+    cursor:             pointer;
+    height:             16px;
+    width:              16px;
+    margin:             0 auto 0 auto;
+}
+
+.StudioThree {
+	background:         url('/static/reservation/images/piano.png');
+    background-size:    16px;
+    background-repeat:  no-repeat;
+    cursor:             pointer;
+    height:             16px;
+    width:              16px;
+    margin:             0 auto 0 auto;
+}
+
+.StudioFour {
+	background:         url('/static/reservation/images/music.png');
+    background-size:    16px;
+    background-repeat:  no-repeat;
+    cursor:             pointer;
+    height:             16px;
+    width:              16px;
+    margin:             0 auto 0 auto;
+}
+
+#helpDiv {
+	font				: 	11px calibri, sans-serif;
+	text-align			: 	left;
+	background-color	:	#5CCDC9;
+}
+.txtArea {
+	font: 11px calibri, sans-serif;
+	text-align: left;	
+}
+.ui-widget-header,.ui-state-default, ui-button{
+    background			:		#b9cd6d;
+    border				: 		1px solid #b9cd6d;
+    color				: 		#FFFFFF;
+    font-weight: bold;
+}
+
+.form_message_text {
+	font: 11px calibri, sans-serif;
+	text-align: left;
+}
+
+.BankHoliday {
+	font				: 	14px calibri, sans-serif;
+	background-color	:	orange;
+	color				:	white;
+	text-align			: 	center;
+}
+
+.songEditable button{
+	font				: 	10px calibri, sans-serif;
+	text-align			: 	left;
+}
+.songEditable {
+	font				: 	10px calibri, sans-serif;
+	text-align			: 	left;
+}
+.pointer {
+	 cursor: pointer; }
+}

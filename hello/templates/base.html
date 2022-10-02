@@ -1,0 +1,104 @@
+{% load staticfiles %}
+
+<?xml version="1.0" encoding="charset=utf-8"?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>music-rungis</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+
+	<script type="text/javascript" src="/static/reservation/js/jquery/jquery-2.2.1.js"></script>
+	  
+	<style type="text/css">
+    .jumbotron {
+        background: #532f8c;
+        color: white;
+        padding-bottom: 80px
+    }
+    .jumbotron .btn-primary {
+        background: #845ac7;
+        border-color: #845ac7
+    }
+    .jumbotron .btn-primary:hover {
+        background: #7646c1
+    }
+    .jumbotron p {
+        color: #d9ccee;
+        max-width: 75%;
+        margin: 1em auto 2em
+    }
+    .navbar+.jumbotron {
+        margin-top: -20px
+    }
+    .jumbotron .lang-logo {
+        display: block;
+        background: #b01302;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        border: 2px solid white
+    }
+    .jumbotron .lang-logo img {
+        max-width: 100%
+    }
+    .user-navbar {
+    	background-color: lightgreen;
+    	border-style: solid;
+    	border-width: thin;
+    }
+
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="user-navbar">
+	  <table width="100%">
+	  	<tr>
+	  		{% if current_version %}
+	  			<td style="text-align: left;"><div class="small">Commission Musique Rungis - {{ current_version.version_name }} - {{ current_version.version_date }}</div></td>
+	  		{% endif %}
+	  		<td>
+			  	<div class="small">
+				  	{% if user.is_authenticated %}
+				    	<p title="cliquer pour vous déconnecter">Bienvenue : {{ user.username }} - {{ user.email }} 
+				    	<a href="{% url 'logout' %}?next=/">déconnexion</a>
+				    	</p>
+					{% else %}
+				    	<p title="cliquer pour vous connecter">Bienvenue : <a href="{% url 'login' %}?next=/" >connexion</a>
+				    	</p>
+					{% endif %}
+			  	</div>
+	  		</td>
+	  		<td>
+	  			<div class="small">
+	  				{% if user.is_staff or user.is_superuser %}
+	  					<p title="cliquer pour ouvrir le site d'administration"><a href="{% url 'admin:index' %}" target="_blank">ouvrir le site d'administration</a>
+	  					</p>
+	  				{% endif %} 
+	  			</div>
+	  		</td>
+	  		<td>
+	  			<div class="small" align="right">
+	  				{% if user.is_authenticated %}
+					 	<p title="cliquer pour modifier son mot de passe"><a href="{% url 'password_change' %}?next=/">modifier mon mot de passe</a>
+					 	</p>
+				 	{% endif %}
+	  			</div>
+	  		</td>
+			<td style="text-align: left;"><div class="small" title="cliquer pour envoyer un mail à un administrateur"><a href="mailto:robert.pastor0691@orange.fr?Subject=Site%20de%20la%20Commission%20Musique%20de%20Rungis" target="_top">envoyer un mail à un administrateur</a></div></td>
+		</tr>
+	  </table>
+  </div>
+</nav>
+
+<div class="main-container">
+{% block content %}
+
+{% endblock %}
+</div>
+
+</body>
+</html>

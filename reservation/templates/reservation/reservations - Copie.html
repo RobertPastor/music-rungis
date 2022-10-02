@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% block content %}
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	
+	<link type="text/css" rel="stylesheet" href="/static/reservation/css/daypilot/calendar_green.css" />
+	<link type="text/css" rel="stylesheet" href="/static/reservation/css/daypilot/month_green.css" />
+	
+	<link type="text/css" rel="stylesheet" href="/static/reservation/css/Site.css" />
+	<link type="text/css" rel="stylesheet" href="/static/reservation/css/jquery/jquery-ui.css" />
+	<link type="text/css" rel="stylesheet" href="/static/reservation/css/jquery/jquery.contextMenu.css" />
+	
+	<link rel='shortcut icon' type='image/x-icon' href="{% static 'reservation/images/phare.ico' %}" />
+
+	<script type="text/javascript" src="/static/reservation/js/jquery/jquery-2.2.1.js"></script>
+	<script type="text/javascript" src="/static/reservation/js/jquery/jquery-ui.js"></script>
+	<script type="text/javascript" src="/static/reservation/js/jquery/jquery.ui.position.js" ></script>
+	<script type="text/javascript" src="/static/reservation/js/jquery/jquery.contextMenu.js" ></script>
+	<script type="text/javascript" src="/static/reservation/js/jquery/jquery.jeditable.js" charset="utf-8"></script>
+	
+	<script type="text/javascript" src="/static/reservation/js/toolBox.js"></script>
+
+	<script type="text/javascript" src="/static/reservation/js/daypilot/src/daypilot-common.src.js" ></script>
+	<script type="text/javascript" src="/static/reservation/js/daypilot/src/daypilot-datepicker.src.js" ></script>
+	<script type="text/javascript" src="/static/reservation/js/daypilot/src/daypilot-modal.src.js" ></script>
+	<script type="text/javascript" src="/static/reservation/js/daypilot/src/daypilot-month.src.js" ></script>
+	<script type="text/javascript" src="/static/reservation/js/daypilot/src/daypilot-navigator.src.js" ></script>
+	<script type="text/javascript" src="/static/reservation/js/daypilot/src/daypilot-calendar.src.js" ></script>
+	
+	<script type="text/javascript" src="/static/reservation/js/IsoWeek.js"   ></script>
+	<script type="text/javascript" src="/static/reservation/js/help/help.js"   ></script>
+	<script type="text/javascript" src="/static/reservation/js/Site.js"   ></script>	
+
+</head>
+
+<table width="100%" height="100%" border='1px'>
+	<tr>
+		<td class="header" width="10%">
+		
+			<div class="reload" type="image" onclick="reloadCurrentPeriod()" title="cliquez pour retourner à la période courante"></div>
+			
+		</td>
+		<td class="header" rowspan="2"><div type="image" class="previous_period" id="btnPreviousPeriod" title="cliquez pour passer à la période précédente"></div></td>
+		<td class="silver" colspan="5">
+					
+			<table>
+				<tr>
+					<td>
+						<div class="center silver"> cliquez sur une flèche pour changer de période </div>
+					</td>
+				</tr>
+					<td>
+						<div><marquee behavior="scroll" direction="left" class="small"> ...Veuillez utiliser le click droit sur une réservation pour accéder à un menu contextuel... </marquee></div>
+					</td>
+				<tr>
+					<td>
+						<div><marquee behavior="scroll" direction="right" class="small"> ...Pensez à supprimer les anciennes réservations dont vous êtes le propriétaire... </marquee></div>
+					</td>
+				</tr>
+			</table>
+					
+		</td>
+		
+		<td class="silver" id="td_form_message" style='text-align: center; display: none;' rowspan="2">
+			<div id='form_message' style='text-align: center; display: none;'>
+                <img src='/static/reservation/images/gif_anime_puces.gif' style="width:24px;height:24px;border:0" />
+                <br />
+                <div id='form_message_text' class="form_message_text"></div>
+            </div>
+		</td>
+		
+		<td class="header" rowspan="2"><div type="image" class="next_period" id="btnNextPeriod"  title="cliquez pour passer à la période suivante"></div></td>
+		<td class="question_mark_bg" rowspan="2"><div class="question_mark" type="image" onclick="showHelp()" title="cliquez pour obtenir de l'aide"></div></td>
+	</tr>
+	<tr>
+		<td class="header" width="10%">
+			<table>
+				<tr>
+					<td>
+						<div class="toggleMonthWeek" title="cliquez pour changer le mode de présentation"><a href="#" class="toggler">Mensuel</a></div>
+					</td>
+					<td>
+						<div id="weeklyReservationsDivId" title="cliquez pour générer les réservations périodiques de la semaine" onclick="generateWeeklyReservations()" ><img class="weeklyReservations" src='/static/reservation/images/piano.png' /></div>
+					</td>
+					<td>
+						<div id="deleteOldWeeklyReservationsDivId" title="cliquez pour supprimer les anciennes réservations de la semaine courante." onclick="deleteOldReservations()" ><img class="trashBin" src='/static/reservation/images/trashBin.png' /></div>
+					</td>
+					
+				</tr>
+			</table>
+			
+		</td>
+		<td class="silver"><div id="labelWeekMonth" class="center silver">Semaine</div></td>
+		<td class="silver">
+			<div class="weekNumber" id="weekNumber"></div>
+			<div class="monthNumber" id="monthNumber" style="display: none;"></div>
+		</td>
+
+		<td class="silver">		
+			<div class="pointer" title="cliquez pour obtenir une sortie EXCEL">
+				<!--  <a id="excel" href="{% url 'createExcel' %}">  -->
+				<!--   <img src="/static/reservation/images/Excel-icon.png" style="width:24px;height:24px;border:0"> -->
+				<!--   </a> -->
+			</div>							
+		</td>
+		<td class="silver"><div class="center silver" >Année</div></td>
+		<td class="silver"><div class="year" id="year"></div></td>
+	</tr>
+
+</table>
+
+<div id="dialogCreate"></div>
+<div id="dialogResize"></div>
+<div id="dialogMove"></div>
+<div id="dialogDelete"></div>
+<div id="dialogModify"></div>
+
+<div>
+	<div id="dp"></div>
+</div>
+
+<div id="dialog-confirm" class="song"></div>
+
+<div id="dialog-details"></div>
+<div id="helpDiv" style="display: none;"></div>
+<div id="versions" style="display: none;">
+	<table>
+		<thead></thead>
+		<tbody></tbody>
+	</table>
+</div>
+<div id="overlay" class="overlay">
+	<img class="loading-indicator" />
+</div>
+
+{% endblock content %}

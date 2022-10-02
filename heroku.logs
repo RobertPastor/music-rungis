@@ -1,0 +1,101 @@
+2016-04-05T15:57:11.412396+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2015&week=53&action=dec'>
+2016-04-05T15:57:11.498856+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2015&week=53&action=dec" host=music-rungis.herokuapp.com request_id=dfbaa644-ab48-494d-9037-7792c07ef4ad fwd="192.54.144.229" dyno=web.1 connect=1ms service=97ms status=200 bytes=22348
+2016-04-05T15:57:12.907718+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2015&week=52&action=dec'>
+2016-04-05T15:57:12.907571+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:12.974810+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2015&week=52&action=dec" host=music-rungis.herokuapp.com request_id=57a1b9be-07c1-4098-b0c7-6ae6b04b4298 fwd="192.54.144.229" dyno=web.1 connect=1ms service=80ms status=200 bytes=22348
+2016-04-05T15:57:13.883905+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:13.883966+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2015&week=51&action=dec'>
+2016-04-05T15:57:14.072951+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2015&week=51&action=dec" host=music-rungis.herokuapp.com request_id=b86b5658-306f-48d8-9146-1671203ebbbb fwd="192.54.144.229" dyno=web.1 connect=1ms service=209ms status=200 bytes=22348
+2016-04-05T15:57:14.914114+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:14.914469+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2015&week=50&action=dec'>
+2016-04-05T15:57:15.170109+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2015&week=50&action=dec" host=music-rungis.herokuapp.com request_id=e6f96a68-76d6-451b-9a57-09f9a43327ef fwd="192.54.144.229" dyno=web.1 connect=5ms service=277ms status=200 bytes=22348
+2016-04-05T15:57:15.776639+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:15.776735+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2015&week=49&action=dec'>
+2016-04-05T15:57:16.105539+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2015&week=49&action=dec" host=music-rungis.herokuapp.com request_id=9364c539-66ca-4369-8a36-8e473b1d8e69 fwd="192.54.144.229" dyno=web.1 connect=24ms service=348ms status=200 bytes=22348
+2016-04-05T15:57:16.694139+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:16.694215+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2015&week=48&action=dec'>
+2016-04-05T15:57:17.027507+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2015&week=48&action=dec" host=music-rungis.herokuapp.com request_id=2b14685d-7441-47fc-8377-0c3f23a625b9 fwd="192.54.144.229" dyno=web.1 connect=20ms service=366ms status=200 bytes=22348
+2016-04-05T15:57:18.045635+00:00 heroku[router]: at=info method=GET path="/reservation/" host=music-rungis.herokuapp.com request_id=9861a0c9-dfbb-4aba-99c3-31a22b52a414 fwd="192.54.144.229" dyno=web.1 connect=1ms service=18ms status=200 bytes=5044
+2016-04-05T15:57:18.448743+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=14&action=first'>
+2016-04-05T15:57:18.448682+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:18.960961+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=14&action=first" host=music-rungis.herokuapp.com request_id=cfbe6ec6-eddd-4eb1-8732-57e76ce0430d fwd="192.54.144.229" dyno=web.1 connect=1ms service=626ms status=200 bytes=22348
+2016-04-05T15:57:21.367252+00:00 heroku[router]: at=info method=GET path="/reservation/" host=music-rungis.herokuapp.com request_id=eb9401ab-a049-423c-acd6-681e61fb3028 fwd="192.54.144.229" dyno=web.1 connect=3ms service=11ms status=200 bytes=5044
+2016-04-05T15:57:21.686591+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:21.686701+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=14&action=first'>
+2016-04-05T15:57:21.765081+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=14&action=first" host=music-rungis.herokuapp.com request_id=4e144feb-769d-4678-810e-1391f2b6bc88 fwd="192.54.144.229" dyno=web.1 connect=1ms service=92ms status=200 bytes=22348
+2016-04-05T15:57:22.473374+00:00 heroku[router]: at=info method=GET path="/reservation/" host=music-rungis.herokuapp.com request_id=04ef934c-eb34-41e2-8b42-5db286a4ea1a fwd="192.54.144.229" dyno=web.1 connect=1ms service=30ms status=200 bytes=5044
+2016-04-05T15:57:22.786685+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:22.786799+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=14&action=first'>
+2016-04-05T15:57:22.855774+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=14&action=first" host=music-rungis.herokuapp.com request_id=d7fac189-21b8-4f64-b3fc-340a2f077189 fwd="192.54.144.229" dyno=web.1 connect=2ms service=78ms status=200 bytes=22348
+2016-04-05T15:57:25.004115+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:25.004188+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=14&action=dec'>
+2016-04-05T15:57:25.072634+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=14&action=dec" host=music-rungis.herokuapp.com request_id=f33626bb-08d1-4beb-ae4c-13d9a2a3abdd fwd="192.54.144.229" dyno=web.1 connect=1ms service=79ms status=200 bytes=22348
+2016-04-05T15:57:25.845226+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:25.845272+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=13&action=dec'>
+2016-04-05T15:57:25.938337+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=13&action=dec" host=music-rungis.herokuapp.com request_id=a537e516-ae33-49e9-8e78-3ad7a3394e55 fwd="192.54.144.229" dyno=web.1 connect=1ms service=101ms status=200 bytes=22348
+2016-04-05T15:57:26.736004+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:26.736142+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=12&action=dec'>
+2016-04-05T15:57:26.860576+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=12&action=dec" host=music-rungis.herokuapp.com request_id=e65fbef0-a482-4ada-96b3-14fe632f97ec fwd="192.54.144.229" dyno=web.1 connect=1ms service=138ms status=200 bytes=22348
+2016-04-05T15:57:27.223998+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:27.224117+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=12&action=dec'>
+2016-04-05T15:57:27.324354+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=12&action=dec" host=music-rungis.herokuapp.com request_id=63d087e4-2bfe-48c4-9856-d434e932c0e7 fwd="192.54.144.229" dyno=web.1 connect=1ms service=115ms status=200 bytes=22348
+2016-04-05T15:57:27.749923+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:27.750051+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=11&action=dec'>
+2016-04-05T15:57:27.886202+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=11&action=dec" host=music-rungis.herokuapp.com request_id=e42d34e4-d792-4b32-b9fa-6f575e2fd3e8 fwd="192.54.144.229" dyno=web.1 connect=1ms service=159ms status=200 bytes=22348
+2016-04-05T15:57:28.197072+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:28.197152+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=11&action=dec'>
+2016-04-05T15:57:28.505359+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=11&action=dec" host=music-rungis.herokuapp.com request_id=22326de4-2d0d-4b0f-93be-f124c40e4278 fwd="192.54.144.229" dyno=web.1 connect=1ms service=342ms status=200 bytes=22348
+2016-04-05T15:57:28.789423+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:28.789461+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=10&action=dec'>
+2016-04-05T15:57:29.141386+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=10&action=dec" host=music-rungis.herokuapp.com request_id=aa78f461-84f1-481e-bdf4-17083b65ec71 fwd="192.54.144.229" dyno=web.1 connect=1ms service=441ms status=200 bytes=22347
+2016-04-05T15:57:29.462091+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:29.462169+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=10&action=dec'>
+2016-04-05T15:57:29.805387+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=10&action=dec" host=music-rungis.herokuapp.com request_id=fa2a4fe4-fe7b-43d0-920e-2bb07a618706 fwd="192.54.144.229" dyno=web.1 connect=1ms service=386ms status=200 bytes=22347
+2016-04-05T15:57:30.294408+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:30.294793+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=9&action=dec'>
+2016-04-05T15:57:30.465758+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=9&action=dec" host=music-rungis.herokuapp.com request_id=328d93b6-e27f-41b1-8e7d-68aa41f3cf60 fwd="192.54.144.229" dyno=web.1 connect=1ms service=183ms status=200 bytes=22347
+2016-04-05T15:57:31.191866+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:31.192155+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=8&action=dec'>
+2016-04-05T15:57:31.417226+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=8&action=dec" host=music-rungis.herokuapp.com request_id=7f0b9253-d6f1-4ac9-8bdc-71500b1b5c02 fwd="192.54.144.229" dyno=web.1 connect=1ms service=251ms status=200 bytes=22347
+2016-04-05T15:57:31.665344+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:31.665434+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=8&action=dec'>
+2016-04-05T15:57:31.954655+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=8&action=dec" host=music-rungis.herokuapp.com request_id=631630d2-cd75-43e8-a6be-98d7beb2f890 fwd="192.54.144.229" dyno=web.1 connect=2ms service=309ms status=200 bytes=22347
+2016-04-05T15:57:32.504503+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:32.504554+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=7&action=dec'>
+2016-04-05T15:57:32.616208+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=7&action=dec" host=music-rungis.herokuapp.com request_id=99ff419b-9a04-40e0-a7e8-4693cd3492b8 fwd="192.54.144.229" dyno=web.1 connect=1ms service=116ms status=200 bytes=22347
+2016-04-05T15:57:33.909992+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:33.910589+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=6&action=dec'>
+2016-04-05T15:57:34.146113+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=6&action=dec" host=music-rungis.herokuapp.com request_id=0ce82e16-eec1-4ced-9dbd-97b05dc6e10f fwd="192.54.144.229" dyno=web.1 connect=1ms service=260ms status=200 bytes=22347
+2016-04-05T15:57:34.934167+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:34.934240+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=5&action=dec'>
+2016-04-05T15:57:35.046668+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=5&action=dec" host=music-rungis.herokuapp.com request_id=416dad5c-3957-46a3-8d65-aa6fb1c4ba81 fwd="192.54.144.229" dyno=web.1 connect=1ms service=129ms status=200 bytes=22347
+2016-04-05T15:57:35.804916+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:35.805048+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=4&action=dec'>
+2016-04-05T15:57:36.121761+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=4&action=dec" host=music-rungis.herokuapp.com request_id=77a3440c-8447-45fd-848f-31d88387825b fwd="192.54.144.229" dyno=web.1 connect=1ms service=328ms status=200 bytes=22347
+2016-04-05T15:57:36.486632+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:36.486776+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=3&action=dec'>
+2016-04-05T15:57:36.712029+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=3&action=dec" host=music-rungis.herokuapp.com request_id=7777fc02-f892-4b17-9a38-7ca12f880003 fwd="192.54.144.229" dyno=web.1 connect=1ms service=241ms status=200 bytes=22347
+2016-04-05T15:57:37.254831+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:37.255053+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=2&action=dec'>
+2016-04-05T15:57:37.645905+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=2&action=dec" host=music-rungis.herokuapp.com request_id=f22b672a-6b97-4f8e-bdb8-00b58358d190 fwd="192.54.144.229" dyno=web.1 connect=1ms service=416ms status=200 bytes=22347
+2016-04-05T15:57:38.495838+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:38.498244+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=1&action=dec'>
+2016-04-05T15:57:39.065144+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=1&action=dec" host=music-rungis.herokuapp.com request_id=35857d97-c8c9-4d8c-89db-c3b8d45dafea fwd="192.54.144.229" dyno=web.1 connect=1ms service=630ms status=200 bytes=22348
+2016-04-05T15:57:39.896751+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2015&week=53&action=dec'>
+2016-04-05T15:57:39.894684+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:40.221332+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2015&week=53&action=dec" host=music-rungis.herokuapp.com request_id=6b0b6cdd-9bf5-4043-abb3-a021f773b9a9 fwd="192.54.144.229" dyno=web.1 connect=1ms service=346ms status=200 bytes=22348
+2016-04-05T15:57:40.774650+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:40.775118+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2015&week=52&action=dec'>
+2016-04-05T15:57:41.274651+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2015&week=52&action=dec" host=music-rungis.herokuapp.com request_id=ff8695d3-4b7d-4787-9a63-99e3edfcff59 fwd="192.54.144.229" dyno=web.1 connect=1ms service=526ms status=200 bytes=22348
+2016-04-05T15:57:42.083942+00:00 heroku[router]: at=info method=GET path="/reservation/" host=music-rungis.herokuapp.com request_id=6d6f4e17-2e30-4f3d-9c47-a2d76cd0d369 fwd="192.54.144.229" dyno=web.1 connect=0ms service=89ms status=200 bytes=5044
+2016-04-05T15:57:42.468155+00:00 app[web.1]: modify week - user = admin
+2016-04-05T15:57:42.468730+00:00 app[web.1]: <WSGIRequest: GET '/reservation/modifyWeek?year=2016&week=14&action=first'>
+2016-04-05T15:57:43.130571+00:00 heroku[router]: at=info method=GET path="/reservation/modifyWeek?year=2016&week=14&action=first" host=music-rungis.herokuapp.com request_id=a1db6a6c-041b-4f01-b7bf-a290d8a87bd6 fwd="192.54.144.229" dyno=web.1 connect=1ms service=753ms status=200 bytes=22348
+2016-04-05T16:31:34.710189+00:00 heroku[web.1]: Idling
+2016-04-05T16:31:34.710189+00:00 heroku[web.1]: State changed from up to down
+2016-04-05T16:31:41.030350+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2016-04-05T16:31:42.622083+00:00 app[web.1]: [2016-04-05 16:31:42 +0000] [3] [INFO] Handling signal: term
+2016-04-05T16:31:42.628656+00:00 app[web.1]: [2016-04-05 18:31:42 +0000] [9] [INFO] Worker exiting (pid: 9)
+2016-04-05T16:31:42.623269+00:00 app[web.1]: [2016-04-05 18:31:42 +0000] [10] [INFO] Worker exiting (pid: 10)
+2016-04-05T16:31:43.280933+00:00 app[web.1]: [2016-04-05 16:31:43 +0000] [3] [INFO] Shutting down: Master
+2016-04-05T16:31:44.456357+00:00 heroku[web.1]: Process exited with status 0

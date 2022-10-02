@@ -1,0 +1,61 @@
+﻿
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+	<script type="text/javascript" src="/static/reservation/js/jquery/jquery-2.2.1.js"></script>
+	<script type="text/javascript" src="/static/js/hello.js"></script>
+	
+	<link rel='shortcut icon' type='image/x-icon' href="{% static 'reservation/images/phare.ico' %}" />
+	<script type="text/javascript">
+		var siteMessages = {{ siteMessages|safe }};
+	</script>
+<head>
+<body>
+	<div class="jumbotron text-center">
+	  <div class="container">
+	  	<table width="100%">
+	  		<tr>
+	  			<td title="Commission Musique - Rungis"> <img class="commission" src="{% static 'images/commission-musique.jpg'%}"> </td>
+	  		</tr>
+	  	</table>
+	    
+	    <h2 class="center">Commission Musique - Rungis</h2> </ br> 
+	    <h2 class="center"> Réservations de Studios - Echange de Partitions </h2>
+		
+		<table width="100%">
+			<tr>
+				<td>
+					<div class="center" title="cliquez-moi">
+		    			<a type="button" class="btn btn-blue" href="{% url 'reservation:reservations' %}" ><span class="glyphicon glyphicon-flash"></span>réserver un studio</a>	
+					</div>
+				</td>
+				<td>
+					<div class="center" title="cliquez-moi">
+		    			<a type="button" class="btn btn-blue" href="{% url 'partitions:partitions' %}" ><span class="glyphicon glyphicon-flash"></span>échanger des partitions</a>	
+					</div>
+				</td>
+			</tr>
+		</table>
+	  </div>
+	</div>
+	<div>
+		<h3 class="padding">Actualités</h3>
+		<table id="informations" class="informations" border="1" >
+			<thead>
+				<td class="padding bold">Evénement ou Information</td>
+				<td class="padding bold">Date de l'événement</td>
+			</thead>
+			<tbody>
+	
+			</tbody>
+		</table>
+		<div>
+			<p class="small">Nota Bene: il est conseillé d'utiliser FireFox pour profiter pleinement des fonctionnalités de ce site.</p>
+		</div>
+	</div>
+</body>
+{% endblock content  %}

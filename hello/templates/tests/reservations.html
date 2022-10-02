@@ -1,0 +1,740 @@
+<head>
+	<title>music-rungis</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+{% block réservations %}
+
+	<br>
+	<p>Les réservations concernent toutes les créations, modifications et suppression de réservations de studio.</p>
+	<br>
+	<table>
+		  	<thead>
+        		<tr>
+            		<th>Titre du test</th>
+            		<th>Actions</th>
+            		<th>Vérifications</th>
+            		<th>Version</th>
+            		<th>Résultats</th>
+        		</tr>
+    		</thead>
+    		<tbody>
+    		
+		        <tr>
+		            <td>Mode Hebdomdaire - Création d'une réservation</td>
+		            <td>Cliquer sur une tranche horaire et relâcher le bouton de la souris.</td>
+		            <td>Un dialogue modal est présenté. La tranche horaire sélectionnée reste en surbrillance pendant que le dialogue modal est affiché.</td>
+		            <td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Annulation de la création</td>
+		        	<td>L'utilisateur ferme le dialogue en cliquant sur le bouton CLOSE en haut à droite du dialogue ou en cliquant sur NON en bas.</td>
+		        	<td>Le dialogue modal disparait. Aucune réservation n'est créée. La tranche horaire n'est plus affichée en surbrillance.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Dialogue de création</td>
+		        	<td>Cliquer sur une tranche horaire et relâcher le bouton de la souris.</td>
+		        	<td>Le dialogue modal présente le jour et la tranche horaire sélectionnée.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Dialogue de création</td>
+		        	<td>Cliquer sur une tranche horaire et relâcher le bouton de la souris.</td>
+		        	<td>Le dialogue modal présente un bouton OUI qui reste grisé (inopérant).</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Dialogue de création</td>
+		        	<td>Dans le dialogue modal, l'utilisateur saisit le nom d'une réservation (chanson).</td>
+		        	<td>Le bouton OUI reste grisé et inopérant.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Dialogue de création</td>
+		        	<td>Dans le même dialogue modal, l'utilisateur choisit un studio.</td>
+		        	<td>Le bouton OUI devient actif (opérant).</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Dialogue de création</td>
+		        	<td>Dans le même dialogue modal, l'utilisateur efface le nom de la chanson.</td>
+		        	<td>Le bouton OUI redevient grisé, et inopérant.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Dialogue de création</td>
+		        	<td>Dans le même dialogue modal, l'utilisateur saisit à nouveau un nom de chanson.</td>
+		        	<td>Le bouton OUI redevient actif et opérant.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Dialogue de création</td>
+		        	<td>Dans le même dialogue modal, l'utilisateur clique sur le bouton OUI actif.</td>
+		        	<td>Une réservation est créée. Elle est visualisée dans la journée choisie et elle couvre la période sélectionnée.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Dialogue de création</td>
+		        	<td>Dans un dialogue modal de création, l'utilisateur saisit le nom d'une réservation (chanson avec des caractères accentués).</td>
+		        	<td>Une réservation est créée. Le nom affiché contient les caractères accentués.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Dialogue de création</td>
+		        	<td>Dans un dialogue modal de création, l'utilisateur choisit un studio différent.</td>
+		        	<td>Une réservation est créée. Pour chaque choix de studio différent, la réservation enregistrée est visualisée avec une couleur différente.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Dialogue de création</td>
+		        	<td>Dans le dialogue modal, l'utilisateur saisit une chanson et choisit un studio, le bouton OUI devient actif puis il modifie l'heure de fin de telle sorte qu'elle soit antérieure ou égale à l'heure de début.</td>
+		        	<td>le bouton OUI redevient grisé et inopérant.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Dialogue de création - création d'une réservation étendue sur plusieurs demi-heures.</td>
+		        	<td>cliquer sur une tranche horaire et maintenir le bouton (gauche) enfoncé, étendre la sélection à plusieurs tranches horaires, puis relâcher le bouton de la souris.</td>
+		        	<td>Un dialogue modal est présenté. La tranche horaire sélectionnée reste "grisée" pendant que le dialogue modal est affiché.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+		        	<td>Mode Hebdomataire - Dialogue de création - création d'une réservation étendue sur plusieurs demi-heures.</td>
+		        	<td>cliquer sur une tranche horaire et maintenir le bouton (gauche) enfoncé, étendre la sélection à plusieurs tranches horaires, puis relâcher le bouton de la souris.</td>
+		        	<td>Dans le dialogue modal, l'heure de début représente le début de la zone sélectionnée et l'heure de fin correspond à la fin de la zone sélectionnée.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr></tr>
+		        
+	        	<tr>
+	            		<th>Titre du test</th>
+	            		<th>Actions</th>
+	            		<th>Vérifications</th>
+	            		<th>Version</th>
+	            		<th>Résultats</th>
+	        	</tr>
+    			
+		        <tr>
+		        	<td>Propriétaire de la réservation - Modification d'une réservation existante dont l'utilisateur est le propriétaire</td>
+		        	<td>L'utilisateur click (droit contextuel) sur une réservation qui lui appartient.</td>
+		        	<td>Dans le dialogue modal qui apparait, tous les champs sont modifiables (sauf le propriétaire).</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        <tr>
+		        	<td>Propriétaire de la réservation - Modification d'une réservation existante dont l'utilisateur est le propriétaire</td>
+		        	<td>L'utilisateur modifie le nom de la chanson et clique OUI</td>
+		        	<td>la réservation est mise à jour.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        <tr>
+		        	<td>Propriétaire de la réservation - Modification d'une réservation existante dont l'utilisateur est le propriétaire</td>
+		        	<td>L'utilisateur modifie le choix du studio et clique OUI</td>
+		        	<td>la réservation est mise à jour.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        <tr>
+		        	<td>Propriétaire de la réservation - Modification d'une réservation existante dont l'utilisateur est le propriétaire</td>
+		        	<td>L'utilisateur modifie l'heure de début et clique OUI.</td>
+		        	<td>la réservation est mise à jour.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        <tr>
+		        	<td>Propriétaire de la réservation - Modification d'une réservation existante dont l'utilisateur est le propriétaire</td>
+		        	<td>L'utilisateur modifie l'heure de fin et clique OUI.</td>
+		        	<td>la réservation est mise à jour.</td>
+		        	<td>version 4.0 10-Mars-2020</td>
+		            <td>OK</td>
+		        </tr>
+		        
+		        <tr>
+	            		<th>Titre du test</th>
+	            		<th>Actions</th>
+	            		<th>Vérifications</th>
+	            		<th>Version</th>
+	            		<th>Résultats</th>
+	        	</tr>
+		        
+		        <tr>
+                    <td>
+                        Propriétaire de la réservation - déplacement graphique - changement de jour et heure d'une réservation - même jour
+                    </td>
+                    <td>
+                        L'utilisateur click Gauche sur une réservation et maintient le bouton Gauche de la souris enfoncé.
+                        L'utilisateur déplace la réservation dans une autre tranche horaire de la même journée et relâche le bouton.
+                    </td>
+                    <td>
+                        Le dialogue modal est présenté. Les heures de début et de fin montrent la nouvelle tranche horaire.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        OK
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Propriétaire de la réservation - déplacement graphique -changement de jour et heure d'une réservation - dans la même journée.
+                    </td>
+                    <td>
+                    	L'utilisateur click Gauche sur une réservation existante et maintient le bouton Gauche de la souris enfoncé.
+                    	L'utilisateur déplace la réservation dans une autre tranche horaire de la même journée et relâche le bouton.
+                    	Le dialogue modal est présenté. Les heures de début et de fin montrent la nouvelle tranche horaire.
+                        L'utilisateur clique NON ou ferme le dialogue avec le bouton CLOSE (en forme de croix) situé en haut et à droite du bandeau supérieur du dialogue.
+                    </td>
+                    <td>
+                        La réservation n'est pas modifiée.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        OK
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Propriétaire de la réservation - déplacement graphique - changement de jour et heure d'une réservation - dans la même journée.
+                    </td>
+                    <td>
+                    	L'utilisateur click Gauche sur une réservation existante et maintient le bouton Gauche de la souris enfoncé.
+                    	L'utilisateur déplace la réservation dans une autre tranche horaire de la même journée et relâche le bouton.
+                    	Le dialogue modal est présenté. Les heures de début et de fin montrent la nouvelle tranche horaire.
+                        L'utilisateur clique OUI.
+                    </td>
+                    <td>
+                        La réservation est mise à jour, elle est déplacée vers la nouvelle tranche horaire.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        OK
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Propriétaire de la réservation - déplacement graphique - changement de jour et heure d'une réservation.
+                    </td>
+                    <td>
+                        L'utilisateur click Gauche sur une réservation existante et maintient le bouton Gauche de la souris enfoncé.
+                        L'utilisateur déplace la réservation dans une autre tranche horaire d'une autre journée et relâche le bouton.
+                    </td>
+                    <td>
+                        Le dialogue modal est présenté. Il montre la nouvelle date et la nouvelle tranche horaire.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        OK
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Propriétaire de la réservation-déplacement graphique - changement de jour et d'heure d'une réservation
+                    </td>
+                    <td>
+                        L'utilisateur click Gauche sur une réservation existante et maintient le bouton de la souris enfoncé.
+                        L'utilisateur déplace la réservation dans une autre tranche horaire d'une autre journée et relâche le bouton.
+                    </td>
+                    <td>
+                        la zone de destination reste sélectionnée tant que le dialogue modal est ouvert.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        OK
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Propriétaire de la réservation-déplacement graphique - changement de jour et heure d'une réservation
+                    </td>
+                    <td>
+                        L'utilisateur clique NON ou ferme le dialogue avec le bouton situé en haut et à droite du bandeau supérieur du dialogue
+                    </td>
+                    <td>
+                        La réservation reste inchangée
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Propriétaire de la réservation-déplacement graphique - changement de jour et heure d'une réservation
+                    </td>
+                    <td>
+                        L'utilisateur clique OUI
+                    </td>
+                    <td>
+                        La réservation est mise à jour, elle est déplacée vers la nouvelle date et la nouvelle tranche horaire.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                
+                <tr>
+	            		<th>Titre du test</th>
+	            		<th>Actions</th>
+	            		<th>Vérifications</th>
+	            		<th>Version</th>
+	            		<th>Résultats</th>
+	        	</tr>
+	        	
+                <tr>
+                    <td>
+                        Propriétaire de la réservation - mode Hebdomadaire uniquement-Extension graphique de l'heure de début ou de fin d'une réservation
+                    </td>
+                    <td>
+                        L'utilisateur passe la souris sur le bord supérieur ou sur le bord inférieur d'une réservation.
+                    </td>
+                    <td>
+                        Le curseur change de forme pour signifier que la bordure peut être sélectionnée et étendue ou réduite
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Propriétaire de la réservation - mode Hebdomadaire uniquement-Extension graphique de l'heure de début ou de fin d'une réservation
+                    </td>
+                    <td>
+                        L'utilisateur clique sur le bord inférieur de la réservation et étend l'heure de fin.
+                    </td>
+                    <td>
+                        Le dialogue modal est présenté. Il montre la nouvelle tranche horaire.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Propriétaire de la réservation - mode Hebdomadaire uniquement-Extension graphique de l'heure de début ou de fin d'une réservation
+                    </td>
+                    <td>
+                        L'utilisateur clique sur le bord supérieur et modifie l'heure de début
+                    </td>
+                    <td>
+                        Le dialogue modal est présenté. Il montre la nouvelle tranche horaire.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                
+                <tr>
+	            		<th>Titre du test</th>
+	            		<th>Actions</th>
+	            		<th>Vérifications</th>
+	            		<th>Version</th>
+	            		<th>Résultats</th>
+	        	</tr>
+                <tr>
+                    <td>
+                        Mode Hebdomadaire - Informations par Pop Up-Informations supplémentaires d'une réservation
+                    </td>
+                    <td>
+                        L'utilisateur place le pointeur de la souris sur une réservation
+                    </td>
+                    <td>
+                        Un Pop up apparait qui donne l'heure de début et l'heure de fin de la réservation
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                
+                <tr>
+	            		<th>Titre du test</th>
+	            		<th>Actions</th>
+	            		<th>Vérifications</th>
+	            		<th>Version</th>
+	            		<th>Résultats</th>
+	        	</tr>
+                <tr>
+                    <td>
+                        L'utilisateur n'est pas le propriétaire de la réservation et il ne fait pas partie du staff-Modification d'une réservation dont l'utilisateur n'est pas le propriétaire
+                    </td>
+                    <td>
+                        L'utilisateur clique (GAUCHE) sur une réservation (qui ne lui appartient pas).
+                    </td>
+                    <td>
+                        Un dialogue modal est présenté. La saisie de l'ensemble des champs est grisée. Seuls la clôture du dialogue et le bouton NON sont disponibles. Le bouton OUI reste grisé.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mode Hebdo -L'utilisateur n'est pas le propriétaire de la réservation et il ne fait pas partie du staff-déplacement graphique d'une réservation dont l'utilisateur n'est pas le propriétaire
+                    </td>
+                    <td>
+                        L'utilisateur clique sur une réservation, maintient le bouton de la souris enfoncé, déplace la réservation vers une autre tranche horaire (de la même journée)
+                    </td>
+                    <td>
+                        Un dialogue modal est présenté. La saisie de l'ensemble des champs est grisée. Seuls la clôture du dialogue et le bouton NON sont disponibles. Le bouton OUI reste grisé.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mode Hebdomadaire - L'utilisateur n'est pas le propriétaire de la réservation et il ne fait pas partie du staff-déplacement graphique d'une réservation dont l'utilisateur n'est pas le propriétaire
+                    </td>
+                    <td>
+                        L'utilisateur clique sur une réservation, maintient le bouton de la souris enfoncé, déplace la réservation vers une autre journée
+                    </td>
+                    <td>
+                        Un dialogue modal est présenté. La saisie de l'ensemble des champs est grisée. Seuls la clôture du dialogue et le bouton NON sont disponibles. Le bouton OUI reste grisé.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                
+                <tr>
+	            		<th>Titre du test</th>
+	            		<th>Actions</th>
+	            		<th>Vérifications</th>
+	            		<th>Version</th>
+	            		<th>Résultats</th>
+	        	</tr>
+	        	
+                <tr>
+                    <td>
+                        Mode Hebdo - Propriétaire de la réservation-Suppression d'une réservation
+                    </td>
+                    <td>
+                        cliquer GAUCHE sur une réservation dont vous êtes le propriétaire
+                    </td>
+                    <td>
+                        Un dialogue modal est présenté. La case à cocher permettant la suppression est active.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mode Hebdo - Propriétaire de la réservation-Suppression d'une réservation
+                    </td>
+                    <td>
+                        cliquer sur le bouton NON ou bien fermer le dialogue avec le bouton situé en haut et à droite du bandeau du dialogue
+                    </td>
+                    <td>
+                        La réservation n'est pas supprimée
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mode Hebdo - Propriétaire de la réservation-Suppression d'une réservation
+                    </td>
+                    <td>
+                        cocher la case permettant la suppression puis cliquer sur le bouton NON ou fermer le dialoguer grâce au bouton situé en haut et à droite du bandeau du dialogue
+                    </td>
+                    <td>
+                        La réservation n'est pas supprimée
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mode Hebdo - Propriétaire de la réservation-Suppression d'une réservation
+                    </td>
+                    <td>
+                        L'utilisateur coche la case permettant la suppression puis il clique OUI
+                    </td>
+                    <td>
+                        la réservation est supprimée
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+	            		<th>Titre du test</th>
+	            		<th>Actions</th>
+	            		<th>Vérifications</th>
+	            		<th>Version</th>
+	            		<th>Résultats</th>
+	        	</tr>
+                <tr>
+                    <td>
+                        Utilisateur est membre du Staff-Modification d'une réservation dont l'utilisateur n'est pas le propriétaire
+                    </td>
+                    <td>
+                        L'utilisateur clique GAUCHE sur une réservation (qui ne lui appartient pas).
+                    </td>
+                    <td>
+                        Le dialogue modal est présenté. Tous les champs sont modifiables, y compris la case à cocher permettant la suppression de la réservation.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                
+                <tr>
+	            		<th>Titre du test</th>
+	            		<th>Actions</th>
+	            		<th>Vérifications</th>
+	            		<th>Version</th>
+	            		<th>Résultats</th>
+	        	</tr>
+                
+                <tr>
+                    <td>
+                        Mode Mensuel-création d'une réservation
+                    </td>
+                    <td>
+                        L'utilisateur clique GAUCHE dans une journée
+                    </td>
+                    <td>
+                        Un dialogue modal apparait. En plus du nom de la chanson et du choix du studio, l'utilisateur doit sélectionner une heure de début et une heure de fin.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mode Mensuel-création d'une réservation
+                    </td>
+                    <td>
+                        L'utilisateur fournit une heure de début et une heure de fin - l'heure de fin est supérieure à l'heure de début. L'utilisateur clique sur OUI
+                    </td>
+                    <td>
+                        Une nouvelle réservation est créée.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                
+                <tr>
+	            		<th>Titre du test</th>
+	            		<th>Actions</th>
+	            		<th>Vérifications</th>
+	            		<th>Version</th>
+	            		<th>Résultats</th>
+	        	</tr>
+                <tr>
+                    <td>
+                        Mode Mensuel-déplacement graphique d'une réservation dont l'utilisateur est le propriétaire
+                    </td>
+                    <td>
+                        L'utilisateur clique sur une réservation dont il est le propriétaire. Il maintient le bouton de la souris enfoncé. Il déplace la réservation vers une autre journée de l'une des semaines visualisées.
+Puis l'utilisateur relâche le bouton GAUCHE de la souris.
+                    </td>
+                    <td>
+                        Un dialogue modal apparait. La nouvelle date est visualisée. Les heures de début et de fin sont inchangées.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mode Mensuel-déplacement graphique d'une réservation dont l'utilisateur est le propriétaire
+                    </td>
+                    <td>
+                        L'utilisateur clique OUI
+                    </td>
+                    <td>
+                        La réservation est déplacée
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mode Mensuel - Propriétaire de la réservation-Suppression d'une réservation
+                    </td>
+                    <td>
+                        cliquer GAUCHE sur une réservation dont vous êtes le propriétaire
+                    </td>
+                    <td>
+                        Un dialogue modal est présenté. La case à cocher permettant la suppression est active.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mode Mensuel - Propriétaire de la réservation-Suppression d'une réservation
+                    </td>
+                    <td>
+                        cliquer sur NON ou fermer le dialogue en utilisant le bouton placé en haut et à droite dans le bandeau du dialogue
+                    </td>
+                    <td>
+                        le dialogue est fermée et la réservation n'est pas supprimée
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mode Mensuel - Propriétaire de la réservation-Suppression d'une réservation
+                    </td>
+                    <td>
+                        cliquer GAUCHE sur une réservation dont vous êtes le propriétaire
+                    </td>
+                    <td>
+                        Un dialogue modal est présenté. La case à cocher permettant la suppression est active.
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mode Mensuel - Propriétaire de la réservation-Suppression d'une réservation
+                    </td>
+                    <td>
+                        cliquer sur le bouton OUI
+                    </td>
+                    <td>
+                        La réservation est supprimée
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mode Mensuel-Informations supplémentaires d'une réservation - par pop up
+                    </td>
+                    <td>
+                        L'utilisateur place le pointeur de la souris sur une réservation
+                    </td>
+                    <td>
+                        Un Pop up apparait qui donne l'heure de début et l'heure de fin de la réservation
+                    </td>
+                    <td>
+                        version 4.0 10-Mars-2020
+                    </td>
+                    <td>
+                        ?
+                    </td>
+                </tr>
+		        
+		        
+		        
+		        
+		    </tbody>
+		</table>
+
+{% endblock réservations  %}
+		     
