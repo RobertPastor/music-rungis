@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 ''' migrate to MySQL - 28th September 2022 '''
 
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -107,7 +107,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'musicrungis',
         'USER': 'mysql',
-        'PASSWORD': 'mysql',
+        'PASSWORD': 'Bobby1&&&xxx',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
@@ -116,7 +116,7 @@ DATABASES = {
     }
 }
 
-'''
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
