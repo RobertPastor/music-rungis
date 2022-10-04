@@ -5,8 +5,14 @@ var APP = APP || {};
 var APPdialogType = APPdialogType || {};
 
 
-var studiosColors = [ {'pk': 1, 'backColor': 'blue'}, {'pk': 2, 'backColor': 'green'},{'pk': 3, 'backColor': 'chocolate'},{'pk': 4, 'backColor': 'brown'} ];
-var studiosFullName = [ {'id': 'Studio1', 'name': 'Studio 1'}, {'id': 'Studio2', 'name': 'Studio 2'}, {'id': 'Piano', 'name': 'Piano'}, {'id': 'Galabru', 'name': 'Galabru'} ];
+var studiosColors = [ {'name': 'Studio 1', 'backColor': 'blue'}, 
+					{'name': 'Studio 2', 'backColor': 'green'},
+					{'name': 'Piano', 'backColor': 'chocolate'},
+					{'name': 'Galabru', 'backColor': 'brown'} ];
+var studiosFullName = [ {'id': 'Studio1', 'name': 'Studio 1'}, 
+						{'id': 'Studio2', 'name': 'Studio 2'}, 
+						{'id': 'Piano', 'name': 'Piano'}, 
+						{'id': 'Galabru', 'name': 'Galabru'} ];
 var frenchMonths = [ 'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
 //separator used between the studio name and the song content
 var Dash = '-';
@@ -2176,11 +2182,23 @@ function getReservation(resaPk) {
  * @returns the background color related to a studio
  */
 function getStudioBackColor(studioId) {
-	for (var id = 0; id < studiosColors.length ; id++) {
-		var studioColor = studiosColors[id];
-		if ( studioColor.pk === studioId ) {
-			//console.log(' get Studio BackColor = ' + studioColor.backColor);
-			return studioColor.backColor;
+	
+	var studios = APP.studios;
+	if (studios != undefined) {
+		for (var idOne = 0; idOne < studios.length ; idOne++) {
+			var studio = studios[idOne];
+			if ( studio.pk === studioId ) {
+				
+				var studioName = studio.fields.name;
+				
+				for (var idTwo = 0; idTwo < studiosColors.length ; idTwo++) {
+					var studioColor = studiosColors[idTwo];
+					if ( studioColor.name === studioName ) {
+						//console.log(' get Studio BackColor = ' + studioColor.backColor);
+						return studioColor.backColor;
+					}
+				}
+			}
 		}
 	}
 	return "yellow";
