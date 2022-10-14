@@ -101,16 +101,18 @@ DATABASES = {
 }
 
 ''' 
-''' super user = robertpastor '''
+''' super user = MusicRungis '''
 ''' password = Bobby1&&&xxx '''
+
+''' python anywhere account '''
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'RobertPastor$musicrungis',
-        'USER': 'RobertPastor',
+        'NAME': 'MusicRungis$musicrungis',
+        'USER': 'MusicRungis',
         'PASSWORD': 'Bobby1&&&xxx',
-        'HOST': 'RobertPastor.mysql.pythonanywhere-services.com',
+        'HOST': 'MusicRungis.mysql.eu.pythonanywhere-services.com',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
