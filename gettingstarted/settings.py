@@ -101,6 +101,8 @@ DATABASES = {
 }
 
 ''' 
+''' super user = robertpastor '''
+''' password = Bobby1&&&xxx '''
 
 DATABASES = {
     'default': {
