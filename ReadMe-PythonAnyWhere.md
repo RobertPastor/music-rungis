@@ -133,6 +133,105 @@ Successfully installed mysqlclient-2.1.1
 (music-rungis) 16:02 ~/music-rungis (master)$ 
 
 
+## check git remote
+(music-rungis) 16:06 ~/music-rungis (master)$ git remote -v
+origin  https://github.com/RobertPastor/music-rungis.git (fetch)
+origin  https://github.com/RobertPastor/music-rungis.git (push)
+(music-rungis) 16:06 ~/music-rungis (master)$ 
+
+## update MySQL database settings - make git pull
+
+(music-rungis) 16:06 ~/music-rungis (master)$ git pull
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 3), reused 5 (delta 3), pack-reused 0
+Unpacking objects: 100% (5/5), 2.19 KiB | 25.00 KiB/s, done.
+From https://github.com/RobertPastor/music-rungis
+   151416f..a8d02bd  master     -> origin/master
+Updating 151416f..a8d02bd
+Fast-forward
+ README.md => ReadMe-Heroku.md |   0
+ ReadMe-PythonAnyWhere.md      | 139 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ gettingstarted/settings.py    |  10 ++++++----
+ 3 files changed, 145 insertions(+), 4 deletions(-)
+ rename README.md => ReadMe-Heroku.md (100%)
+ create mode 100644 ReadMe-PythonAnyWhere.md
+(music-rungis) 16:07 ~/music-rungis (master)$ 
+
+
+# make migrations
+
+(music-rungis) 16:07 ~/music-rungis (master)$ python manage.py makemigrations                                                                                                                               
+No changes detected
+(music-rungis) 16:07 ~/music-rungis (master)$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, hello, partitions, reservation, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying hello.0001_initial... OK
+  Applying hello.0002_sitemessage... OK
+  Applying hello.0003_sitemessage_event_date... OK
+  Applying hello.0004_auto_20160413_2148... OK
+  Applying hello.0005_auto_20200216_1300... OK
+  Applying partitions.0001_initial... OK
+  Applying partitions.0002_auto_20170115_1438... OK
+  Applying reservation.0001_initial... OK
+  Applying reservation.0002_auto_20160413_2300... OK
+  Applying reservation.0003_studio_color... OK
+  Applying reservation.0004_weekday_weeklyreservation... OK
+  Applying reservation.0005_auto_20171216_1439... OK
+  Applying reservation.0006_auto_20171216_1558... OK
+  Applying sessions.0001_initial... OK
+(music-rungis) 16:09 ~/music-rungis (master)$ 
+
+## create super user
+
+(music-rungis) 16:09 ~/music-rungis (master)$ python manage.py createsuperuser
+Username (leave blank to use 'musicrungis'): MusicRungis
+Email address: robert.pastor0691@gmail.com
+Password: .....................................Bobby1&&&xxx .................................
+Password (again): 
+Superuser created successfully.
+(music-rungis) 16:11 ~/music-rungis (master)$ 
+
+
+## go to the pythonanywhere web tab and reload the site .... It should be working now
+
+## create the Studios and the Week days
+
+(music-rungis) 16:15 ~/music-rungis (master)$ python manage.py StudiosInitialize
+Piano
+Galabru
+Studio 1
+Studio 2
+(music-rungis) 16:16 ~/music-rungis (master)$ python manage.py WeekDaysInitialize
+lundi
+mardi
+mercredi
+jeudi
+vendredi
+(music-rungis) 16:16 ~/music-rungis (master)$ 
+
+
+
+
+
 
  
 
