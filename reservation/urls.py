@@ -1,8 +1,10 @@
 from django.conf.urls import re_path
 
-from reservation.views import modifyPeriod, addBooking, deleteBooking, modifyBooking, reservations, deleteOldBookings
-from reservation.WeeklyReservationsViews import generateWeeklyReservations
-from reservation.ExcelOutput import createExcelOutput 
+from reservation.views.ManageBookings import addBooking, deleteBooking, modifyBooking, deleteOldBookings
+from reservation.views.ManageReservations import reservations
+from reservation.views.ManagePeriods import modifyPeriod
+from reservation.views.WeeklyReservationsViews import generateWeeklyReservations
+from reservation.views.ExcelOutput import createExcelOutput 
 #from django.views.decorators.csrf import csrf_exempt
 
 app_name = "reservation"
@@ -16,7 +18,6 @@ urlpatterns = [
     re_path(r'^modifyBooking$', modifyBooking , name = 'modifyBooking'),
     re_path(r'^generateWeeklyReservations$', generateWeeklyReservations , name = 'generateWeeklyReservations'),
     re_path(r'^deleteOldBookings$', deleteOldBookings , name = 'deleteOldBookings'),
-    
 ]
 
 ''' view to create an EXCEL file '''

@@ -1,3 +1,6 @@
+div.main {
+	height: 100%;
+}
 .grey {
 	background-color : cyan;
 }
@@ -50,6 +53,7 @@
 	background-color : 	#5FD4B1;
 	text-align: 		center;
 }
+
 table {
 	width: 100%;
 }
@@ -142,6 +146,7 @@ IMG.displayed {
 .previous_week:hover {
 	background-color:	yellow;
 }
+
 .next_week:hover {
 	background-color:	yellow;
 }
@@ -174,6 +179,7 @@ IMG.displayed {
     width:              16px;
     margin:             0 auto 0 auto;
 }
+
 .StudioOne {
 	background:         url('/static/reservation/images/StudioOne.png');
     background-size:    16px;
@@ -219,10 +225,12 @@ IMG.displayed {
 	text-align			: 	left;
 	background-color	:	#5CCDC9;
 }
+
 .txtArea {
 	font: 11px calibri, sans-serif;
 	text-align: left;	
 }
+
 .ui-widget-header,.ui-state-default, ui-button{
     background			:		#b9cd6d;
     border				: 		1px solid #b9cd6d;
@@ -246,10 +254,12 @@ IMG.displayed {
 	font				: 	10px calibri, sans-serif;
 	text-align			: 	left;
 }
+
 .songEditable {
 	font				: 	10px calibri, sans-serif;
 	text-align			: 	left;
 }
+
 .pointer {
-	 cursor: pointer; }
+	 cursor: pointer; 
 }

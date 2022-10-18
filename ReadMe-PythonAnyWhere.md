@@ -86,7 +86,24 @@ Installing collected packages: whitenoise
 Successfully installed whitenoise-6.2.0
 (music-rungis) 14:35 ~ $ 
 
-## List locally installed packages
+## Install mysqlclient
+
+(music-rungis) 16:01 ~/music-rungis (master)$ pip install mysqlclient
+Looking in links: /usr/share/pip-wheels
+Collecting mysqlclient
+  Downloading mysqlclient-2.1.1.tar.gz (88 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.1/88.1 kB 3.1 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Building wheels for collected packages: mysqlclient
+  Building wheel for mysqlclient (setup.py) ... done
+  Created wheel for mysqlclient: filename=mysqlclient-2.1.1-cp37-cp37m-linux_x86_64.whl size=109884 sha256=e328b5c2014c36f2206d8a336cd6b7ebfa21c45697a3ce0d54068775306b601b
+  Stored in directory: /home/MusicRungis/.cache/pip/wheels/95/2d/67/2cb3f82e435fc8e055cb2761a15a0812bf086068f6fb835462
+Successfully built mysqlclient
+Installing collected packages: mysqlclient
+Successfully installed mysqlclient-2.1.1
+(music-rungis) 16:02 ~/music-rungis (master)$ 
+
+## List packages installed in the virtual environment
 
 (music-rungis) 14:35 ~ $ python -m pip freeze
 Django==2.2
@@ -115,23 +132,6 @@ path is
 ## create the MySQL database
 follow pythonanywhere instructions
 
-## Install mysqlclient
-
-(music-rungis) 16:01 ~/music-rungis (master)$ pip install mysqlclient
-Looking in links: /usr/share/pip-wheels
-Collecting mysqlclient
-  Downloading mysqlclient-2.1.1.tar.gz (88 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.1/88.1 kB 3.1 MB/s eta 0:00:00
-  Preparing metadata (setup.py) ... done
-Building wheels for collected packages: mysqlclient
-  Building wheel for mysqlclient (setup.py) ... done
-  Created wheel for mysqlclient: filename=mysqlclient-2.1.1-cp37-cp37m-linux_x86_64.whl size=109884 sha256=e328b5c2014c36f2206d8a336cd6b7ebfa21c45697a3ce0d54068775306b601b
-  Stored in directory: /home/MusicRungis/.cache/pip/wheels/95/2d/67/2cb3f82e435fc8e055cb2761a15a0812bf086068f6fb835462
-Successfully built mysqlclient
-Installing collected packages: mysqlclient
-Successfully installed mysqlclient-2.1.1
-(music-rungis) 16:02 ~/music-rungis (master)$ 
-
 
 ## check git remote
 (music-rungis) 16:06 ~/music-rungis (master)$ git remote -v
@@ -139,7 +139,7 @@ origin  https://github.com/RobertPastor/music-rungis.git (fetch)
 origin  https://github.com/RobertPastor/music-rungis.git (push)
 (music-rungis) 16:06 ~/music-rungis (master)$ 
 
-## update MySQL database settings - make git pull
+## update MySQL database settings - run git pull
 
 (music-rungis) 16:06 ~/music-rungis (master)$ git pull
 remote: Enumerating objects: 8, done.
@@ -228,7 +228,7 @@ jeudi
 vendredi
 (music-rungis) 16:16 ~/music-rungis (master)$ 
 
-
+## create the Weekly reservations
 
 
 

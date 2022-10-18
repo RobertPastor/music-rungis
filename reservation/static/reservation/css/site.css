@@ -1,8 +1,4 @@
 
-html, body {
-  height:100%;
-}
-
 
 a.toggler {
 	font: 12px arial, sans-serif;
@@ -42,6 +38,7 @@ a.toggler.off {
 	background-color:	blue;
 	width :	100%;
 }
+
 .buttonDelete:hover {
 	background-color:	orange;
 }
@@ -50,14 +47,17 @@ a.toggler.off {
 	font: 10px arial, sans-serif;
 	color: blue;
 }
+
 .Studio2 {
 	font: 10px arial, sans-serif;
 	color: blue;
 }
+
 .Piano {
 	font: 10px arial, sans-serif;
 	color: blue;
 }
+
 .Galabru {
 	font: 10px arial, sans-serif;
 	color: blue;

@@ -19,10 +19,10 @@ from django.core import serializers
 from django.http import HttpResponse
 
 from reservation.models import Studio, Reservation, WeeklyReservation, WeekDay
-from reservation.displayModeFile import DisplayMode
-from reservation.StudioUsers import getStudioUsers
-from reservation.views import getReservations
-from reservation.BankHolidays import FrenchBankHolidays
+from reservation.views.displayModeFile import DisplayMode
+from reservation.views.StudioUsers import getStudioUsers
+from reservation.views.ManageReservations import getReservations
+from reservation.views.BankHolidays import FrenchBankHolidays
 
 from gettingstarted.settings import TIME_ZONE
 

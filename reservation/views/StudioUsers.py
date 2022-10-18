@@ -23,9 +23,3 @@ def getStudioUsers(current_user):
     #print studio_users
     return studio_users
 
-
-#============================================
-if __name__ == '__main__':
-    
-    for user in getStudioUsers():
-        print (user)

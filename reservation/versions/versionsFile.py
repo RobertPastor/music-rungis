@@ -38,6 +38,10 @@ class VersionsList(object):
     
     def fill(self):
         
+        version = Version(version_name='Version 4.2' , version_date='18th October 2022', 
+                          change_rationale='''migrate to python anywhere ''')
+        self.add(version)
+        
         version = Version(version_name='Version 4.1' , version_date='9th January 2022', 
                           change_rationale='''cannot delete old reservations in previous year ''')
         self.add(version)

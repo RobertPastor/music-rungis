@@ -16,14 +16,14 @@ from xlsxwriter import Workbook
 #from xlwt.Style import XFStyle
 #from xlwt.Style import colour_map
 
-from datetime import datetime , date
-from reservation.arial10 import fitwidth
+from datetime import datetime , timedelta, date
+
+from reservation.views.arial10 import fitwidth
 from reservation.models import Reservation
 from reservation.versions.versionsFile import VersionsList
 
 from django.shortcuts import  HttpResponse
 from django.utils import timezone
-from reservation.views import semaine 
 
 French_Locale = ""
 
@@ -31,6 +31,17 @@ startingHours = 9
 endingHours = 20
 
 frenchMonths = [ 'janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+
+
+def semaine(annee, sem):
+    ''' utiliser datetime pour pouvoir ajouter des heures '''
+    ref = datetime(annee, 1, 4) # Le 4 janvier est toujours en semaine 1
+    j = ref.weekday()
+    jours = 7*(sem - 1) - j
+    ''' si ref n'est pas du type datetime impossible de rajouter un timedelta '''
+    lundi = ref + timedelta(days=jours)
+    ''' python 2 to python 3 xrange to range '''
+    return [lundi + timedelta(days=n) for n in range(7)]
 
 
 class FitSheetWrapper(object):

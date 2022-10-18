@@ -95,3 +95,4 @@ class DisplayMode(object):
     
     def getMonthNumber(self):
         return self.month_number
+    
