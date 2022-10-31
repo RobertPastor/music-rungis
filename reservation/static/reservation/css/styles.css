@@ -1,6 +1,28 @@
 div.main {
 	height: 100%;
 }
+
+table {
+	width: 100%;
+}
+
+th {
+	background-color : #00A876;
+}
+
+div.center {
+	font: 11px calibri, sans-serif;
+	text-align: center;
+}
+
+IMG.displayed {
+    display: 		block;
+    margin-left: 	auto;
+    margin-right: 	auto;
+    background-color : lime;
+}
+
+
 .grey {
 	background-color : cyan;
 }
@@ -20,6 +42,7 @@ div.main {
 	background-color : #36D695;
 	text-align: center;
 }
+
 .day {
 	font		: 12px calibri, sans-serif;
 	font-weight	: bold;
@@ -55,25 +78,6 @@ div.main {
 	text-align: 		center;
 }
 
-table {
-	width: 100%;
-}
-
-th {
-	background-color : #00A876;
-}
-
-div.center {
-	font: 11px calibri, sans-serif;
-	text-align: center;
-}
-
-IMG.displayed {
-    display: 		block;
-    margin-left: 	auto;
-    margin-right: 	auto;
-    background-color : lime;
-}
 
 .question_mark_bg {
 	background-color:	#60D6A7;

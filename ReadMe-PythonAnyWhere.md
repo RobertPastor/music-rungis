@@ -229,9 +229,49 @@ vendredi
 
 ## create the Weekly reservations
 
+## set current directory to the projet folder
 
+go to the projet folder (the one containing the .git repo) -> the prompt shows the git branch master
 
+09:38 ~ $ cd music-rungis/
+09:38 ~/music-rungis (master)$
 
- 
+## set the existing virtual environment
+
+locate the virtual environment -> it contains the activate file
+
+09:38 ~/music-rungis (master)$ ls -al ../.virtualenvs/music-rungis/bin/
+total 108
+drwxrwxr-x 3 MusicRungis registered_users 4096 Oct 14 14:34 .
+drwxrwxr-x 4 MusicRungis registered_users 4096 Oct 14 14:12 ..
+drwxrwxr-x 2 MusicRungis registered_users 4096 Oct 14 14:34 __pycache__
+-rw-rw-r-- 1 MusicRungis registered_users 2162 Oct 14 14:12 activate
+
+... source it -> now the prompt shows (1st the name of the virtual environment, the current directory and the name of the master branch
+09:49 ~/music-rungis (master)$ source ../.virtualenvs/music-rungis/bin/activate
+(music-rungis) 09:49 ~/music-rungis (master)$ 
+
+## perform a git pull
+
+(music-rungis) 09:55 ~/music-rungis (master)$ git pull
+remote: Enumerating objects: 31, done.
+remote: Counting objects: 100% (31/31), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 17 (delta 12), reused 17 (delta 12), pack-reused 0
+Unpacking objects: 100% (17/17), 1.92 KiB | 7.00 KiB/s, done.
+From https://github.com/RobertPastor/music-rungis
+   a0ed6f8..658a67d  master     -> origin/master
+Updating a0ed6f8..658a67d
+Fast-forward
+ ReadMe-PythonAnyWhere.md                      |  1 -
+ gettingstarted/settings.py                    | 17 ++---------------
+ reservation/static/reservation/css/site.css   |  9 ++++++++-
+ reservation/static/reservation/css/styles.css |  4 +++-
+ reservation/static/reservation/js/site.js     | 61 +++++++++++++++++++++++++++++++++++++++++--------------------
+ reservation/versions/versionsFile.py          |  4 ++++
+ 6 files changed, 58 insertions(+), 38 deletions(-)
+(music-rungis) 09:55 ~/music-rungis (master)$ 
+
+## return to the python anywhere web tab and reload the application
 
 
