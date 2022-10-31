@@ -400,9 +400,16 @@ IMG.loading-indicator {
     left: 0;
     opacity: 0.5;
 }
+
 .table_reservation {
 	width : 100%;
 	height : 100%;
 	border : 1px;
-	
+}
+
+.mouseWheel {
+	cursor				:   pointer; 
+	font				: 	12px calibri, sans-serif;
+	text-align			: 	center;
+	background-color	:	cyan;
 }

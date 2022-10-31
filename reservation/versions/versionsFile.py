@@ -38,6 +38,10 @@ class VersionsList(object):
     
     def fill(self):
         
+        version = Version(version_name='Version 4.3' , version_date='31st October 2022', 
+                          change_rationale=''' Hours start from 7 to 19 minutes step by 5 minutes ''')
+        self.add(version)
+        
         version = Version(version_name='Version 4.2' , version_date='18th October 2022', 
                           change_rationale='''migrate to python anywhere ''')
         self.add(version)

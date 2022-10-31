@@ -1113,15 +1113,26 @@ function buildEventDialogHtml(args, dialogType) {
 
 	var strHoursStartSelect = '<select class="selectHour" id="startHourSelection" onchange="startHourSelectionChanged()">';
 	// add empty choice in the first place
-	strHoursStartSelect += ' <option value="' + hoursStart + '" selected>' + hoursStart + '</option> ;'
-	for (var n = 0; n < 24; n++) {
-		if (n < 10) {
-			strHoursStartSelect += ' <option value="' + (n).toString() +'">' + (n).toString() + '</option>';
+	let n = 0;
+	for (n = 7; n < 20; n++) {
+		if ( n == parseInt(hoursStart) ) {
+			strHoursStartSelect += ' <option value="' + hoursStart + '" selected>' + hoursStart + '</option> ;'
 		} else {
 			strHoursStartSelect += ' <option value="' + (n).toString() +'">' + (n).toString() + '</option>';
 		}
 	}
 	divHoursStart.innerHTML = strHoursStartSelect;
+	//divHoursStart.innerHTML = '<span class="mouseWheel" id="HoursStartId">12</span>';
+	/**
+	$('#HoursStartId').on('mousewheel', function(event) {
+		console.log(event.deltaX, event.deltaY, event.deltaFactor);
+		if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+			$("#HoursStartId").text("13")
+		} else { 
+			$("#HoursStartId").text("11")
+		}
+	})
+	**/
 	tdHoursStart.appendChild(divHoursStart);
 	trHoursMinutesStart.appendChild(tdHoursStart);
 
@@ -1139,15 +1150,21 @@ function buildEventDialogHtml(args, dialogType) {
 
 	var strMinutesStartSelect = '<select class="selectHour" id="startMinutesSelection" onchange="startMinutesSelectionChanged()"> ';
 	// empty selection to force user to select one
-	strMinutesStartSelect += ' <option value="' + minutesStart + '" selected>' + minutesStart + '</option> ';
-	for (var n = 0; n < 60; n++) {
-		if (n < 10) {
-			strMinutesStartSelect += ' <option value="' + (n).toString() +'">' + '0' + (n).toString() + '</option>';
+	n = 0;
+	while ( n < 60 ) {
+		if ( n == parseInt(minutesStart) ) {
+			strMinutesStartSelect += ' <option value="' + minutesStart + '" selected>' + minutesStart + '</option> ';
 		} else {
-			strMinutesStartSelect += ' <option value="' + (n).toString() +'">' + (n).toString() + '</option>';
+			if (n < 10) {
+					strMinutesStartSelect += ' <option value="' + (n).toString() +'">' + '0' + (n).toString() + '</option>';
+			} else {
+					strMinutesStartSelect += ' <option value="' + (n).toString() +'">' + (n).toString() + '</option>';
+			}
 		}
+		n = n + 5;
 	}
 	divMinutesStart.innerHTML = strMinutesStartSelect;
+	
 	tdMinutesStart.appendChild(divMinutesStart);
 	trHoursMinutesStart.appendChild(tdMinutesStart);
 
@@ -1181,13 +1198,12 @@ function buildEventDialogHtml(args, dialogType) {
 
 	var strHoursEndSelect = '<select class="selectHour" id="endHourSelection" onchange="endHourSelectionChanged()">';
 	// add empty choice in the first place
-	strHoursEndSelect += ' <option value="' + hoursEnd + '" selected>' + hoursEnd + '</option> ;'
-	for (var n = 0; n < 24; n++) {
-		if (n < 10) {
-			strHoursEndSelect += ' <option value="' + (n).toString() +'">' + (n).toString() + '</option>';
+	for (n = 7; n < 20; n++) {
+		if ( n == parseInt(hoursEnd) ) {
+			strHoursEndSelect += ' <option value="' + hoursEnd + '" selected>' + hoursEnd + '</option> ';
 		} else {
 			strHoursEndSelect += ' <option value="' + (n).toString() +'">' + (n).toString() + '</option>';
-		}
+		} 
 	}
 	// select is innner of div
 	divHoursEnd.innerHTML = strHoursEndSelect;
@@ -1208,13 +1224,18 @@ function buildEventDialogHtml(args, dialogType) {
 
 	var strMinutesEndSelect = '<select class="selectHour" id="endMinutesSelection" onchange="endMinutesSelectionChanged()"> ';
 	// empty selection to force user to select one
-	strMinutesEndSelect += ' <option value="' + minutesEnd + '" selected>' + minutesEnd + '</option> ';
-	for (var n = 0; n < 60; n++) {
-		if (n < 10) {
-			strMinutesEndSelect += ' <option value="' + (n).toString() +'">' + '0' + (n).toString() + '</option>';
+	n = 0;
+	while ( n < 60 ) {
+		if ( n == parseInt(minutesEnd) ) {
+			strMinutesEndSelect += ' <option value="' + minutesEnd + '" selected>' + minutesEnd + '</option> ';
 		} else {
-			strMinutesEndSelect += ' <option value="' + (n).toString() +'">' + (n).toString() + '</option>';
+			if (n < 10) {
+					strMinutesEndSelect += ' <option value="' + (n).toString() +'">' + '0' + (n).toString() + '</option>';
+			} else {
+					strMinutesEndSelect += ' <option value="' + (n).toString() +'">' + (n).toString() + '</option>';
+			}
 		}
+		n = n + 5;
 	}
 	divMinutesEnd.innerHTML = strMinutesEndSelect;
 	tdMinutesEnd.appendChild(divMinutesEnd);
@@ -1315,7 +1336,7 @@ function buildEventDialogHtml(args, dialogType) {
 			strRepetitionNumberSelect += '<select class="selectRepetition" id="repetitionSelection" disabled > ';
 			// set selection to one by default 
 			strRepetitionNumberSelect += ' <option value="1" selected>' + (1).toString() + '</option> ';
-			for (var n = 2; n < 10; n++) {
+			for (n = 2; n < 7; n++) {
 				strRepetitionNumberSelect += ' <option value="' + (n).toString() +'">' + (n).toString() + '</option>';
 			}
 			strRepetitionNumberSelect +=  ' </fieldset> ';

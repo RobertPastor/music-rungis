@@ -47,6 +47,7 @@ div.main {
 	background-color : 	gold;
 	text-align: 		center;
 }
+
 .song {
 	font: 12px calibri, sans-serif;
 	font-weight: 		bold;
@@ -263,3 +264,4 @@ IMG.displayed {
 .pointer {
 	 cursor: pointer; 
 }
+
