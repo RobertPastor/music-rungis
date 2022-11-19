@@ -1,5 +1,16 @@
 # MusicRungis.eu.pythonanywhere.com
 
+## Code differences
+
+dj-database-url==0.5.0 not used in pythonanywhere
+import dj_database_url
+
+# Update database configuration with $DATABASE_URL.
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+# database configuration - from PostGres to MySQL
+
 
 ## Clone 
 
