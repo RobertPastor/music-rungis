@@ -26,7 +26,7 @@ SECRET_KEY = 'i+acxn5(akgsn!sr4^qgf(^m&*@+g1@u^t@=8s@axc41ml*f=s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # dont forget to run python manage.py collectstatic
-DEBUG = True
+DEBUG = False
 
 # Application definition
 ''' application put before django.contrib.auth to intercept the password '''
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 ''' migrate to MySQL - 28th September 2022 '''
 
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -100,7 +100,7 @@ DATABASES = {
     }
 }
 
-''' 
+
 ''' super user = MusicRungis '''
 ''' password = Bobby1&&&xxx '''
 
@@ -114,7 +114,7 @@ DATABASES = {
     }
 }
 '''
-
+'''
 DATABASES = {
     
     'default': {
@@ -129,7 +129,7 @@ DATABASES = {
             }
     }
 }
-
+'''
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 

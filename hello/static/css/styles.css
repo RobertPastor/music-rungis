@@ -89,6 +89,19 @@ a.btn:hover {
 	display			:	block;
 	width			:	100%;
  	margin			: 	auto;
-    margin			: 	auto;
   }
+  
+ .hostingPlatforms {
+ 	display		: block;
+ 	width		: 20%;
+ 	height		: 20%;
+ 	margin		: auto;
+ }
+ 
+ .hostingPlatformsHeroku {
+ 	display		: block;
+ 	width		: 50%;
+ 	height		: 50%;
+ 	margin		: auto;
+ }
     
