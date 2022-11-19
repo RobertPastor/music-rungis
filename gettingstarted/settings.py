@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 import os
-#import dj_database_url
+import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -26,7 +26,7 @@ SECRET_KEY = 'i+acxn5(akgsn!sr4^qgf(^m&*@+g1@u^t@=8s@axc41ml*f=s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # dont forget to run python manage.py collectstatic
-DEBUG = False
+DEBUG = True
 
 # Application definition
 ''' application put before django.contrib.auth to intercept the password '''
@@ -165,8 +165,8 @@ DEFAULT_CHARSET = 'utf-8'
 
 
 # Update database configuration with $DATABASE_URL.
-#db_from_env = dj_database_url.config(conn_max_age=500)
-#DATABASES['default'].update(db_from_env)
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
