@@ -172,7 +172,7 @@ DEFAULT_CHARSET = 'utf-8'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
-ALLOWED_HOSTS = ['localhost' , '127.0.0.1' , '*' ,]
+ALLOWED_HOSTS = ['localhost' , '127.0.0.1' , 'musicrungis.eu.pythonanywhere.com' ]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/

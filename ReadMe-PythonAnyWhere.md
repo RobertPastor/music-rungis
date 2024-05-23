@@ -1,5 +1,36 @@
 # MusicRungis.eu.pythonanywhere.com
 
+# log on python anywhere
+
+https://eu.pythonanywhere.com/user/musicrungis/
+account = MusicRungis
+password = same as usual
+
+## set virtual environment
+
+16:52 ~ $ source .virtualenvs/music-rungis/bin/activate
+(music-rungis) 16:52 ~ $ 
+
+## install django 3.2
+
+(music-rungis) 17:01 ~ $ pip install django==3.2
+Looking in links: /usr/share/pip-wheels
+Collecting django==3.2
+  Downloading Django-3.2-py3-none-any.whl (7.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 30.3 MB/s eta 0:00:00
+Collecting asgiref<4,>=3.3.2
+  Downloading asgiref-3.7.2-py3-none-any.whl (24 kB)
+Requirement already satisfied: sqlparse>=0.2.2 in ./.virtualenvs/music-rungis/lib/python3.7/site-packages (from django==3.2) (0.4.3)
+Requirement already satisfied: pytz in ./.virtualenvs/music-rungis/lib/python3.7/site-packages (from django==3.2) (2022.4)
+Collecting typing-extensions>=4
+  Downloading typing_extensions-4.7.1-py3-none-any.whl (33 kB)
+Installing collected packages: typing-extensions, asgiref, django
+  Attempting uninstall: django
+    Found existing installation: Django 2.2
+    Uninstalling Django-2.2:
+      Successfully uninstalled Django-2.2
+Successfully installed asgiref-3.7.2 django-3.2 typing-extensions-4.7.1
+(music-rungis) 17:02 ~ $ 
 
 ## Clone 
 
