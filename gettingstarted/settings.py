@@ -10,7 +10,8 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
 import os
-import dj_database_url
+import platform
+#import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -26,7 +27,10 @@ SECRET_KEY = 'i+acxn5(akgsn!sr4^qgf(^m&*@+g1@u^t@=8s@axc41ml*f=s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # dont forget to run python manage.py collectstatic
-DEBUG = True
+DEBUG = False
+print ( platform.platform().lower() )
+if "windows" in platform.platform().lower():
+    DEBUG = True
 
 # Application definition
 ''' application put before django.contrib.auth to intercept the password '''
@@ -100,36 +104,32 @@ DATABASES = {
     }
 }
 
+if (DEBUG == False):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'MusicRungis$musicrungis',
+            'USER': 'MusicRungis',
+            'PASSWORD': 'Bobby1&&&xxx',
+            'HOST': 'MusicRungis.mysql.eu.pythonanywhere-services.com',
+            'PORT': '3306',
+            'OPTIONS': {
+                'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+                }
+        }
+    }
+
+
+''' 26th May 2023 - migration to django 3.2
+Configure the DEFAULT_AUTO_FIELD setting or the AirlineConfig.default_auto_field attribute 
+to point to a subclass of AutoField, e.g. 'django.db.models.BigAutoField'
+'''
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 ''' super user = MusicRungis '''
 ''' password = Bobby1&&&xxx '''
 
-''' sqllite user admin / bobby1xx '''
-''' python anywhere account '''
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-'''
-'''
-DATABASES = {
-    
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'MusicRungis$musicrungis',
-        'USER': 'MusicRungis',
-        'PASSWORD': 'Bobby1&&&xxx',
-        'HOST': 'MusicRungis.mysql.eu.pythonanywhere-services.com',
-        'PORT': '3306',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-            }
-    }
-}
-'''
+
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
@@ -165,8 +165,8 @@ DEFAULT_CHARSET = 'utf-8'
 
 
 # Update database configuration with $DATABASE_URL.
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+#db_from_env = dj_database_url.config(conn_max_age=500)
+#DATABASES['default'].update(db_from_env)
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -192,13 +192,22 @@ STATICFILES_DIRS = (
 #STATICFILES_STORAGE = 'whitenoise.django.CompressedManifestStaticFilesStorage'
 
 # use for password emails
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 if DEBUG:
-    EMAIL_HOST = 'localhost'
-    EMAIL_PORT = 1025
-    EMAIL_HOST_USER = ''
-    EMAIL_HOST_PASSWORD = ''
-    EMAIL_USE_TLS = False
-    DEFAULT_FROM_EMAIL = 'testing@example.com'
+    EMAIL_HOST = "smtp.gmail.com"
+    EMAIL_HOST_USER = "musicrungis@gmail.com"
+    EMAIL_HOST_PASSWORD = 'Bobby1&&&xxx'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    DEFAULT_FROM_EMAIL = 'music.rungis@gmail.com'
+else:
+    EMAIL_HOST = "smtp.gmail.com"
+    EMAIL_HOST_USER = "musicrungis@gmail.com"
+    EMAIL_HOST_PASSWORD = 'Bobby1&&&xxx'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    DEFAULT_FROM_EMAIL = 'music.rungis@gmail.com'
     
 import warnings
 warnings.showwarning = lambda *x: None

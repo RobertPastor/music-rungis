@@ -269,3 +269,6 @@ IMG.displayed {
 	 cursor: pointer; 
 }
 
+#id_email {
+	 size: 200;
+}

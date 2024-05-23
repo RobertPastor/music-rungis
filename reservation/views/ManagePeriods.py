@@ -126,7 +126,7 @@ def modifyPeriod(request):
             
         else:
             week_number = datetime.today().isocalendar()[1]
-            month_number = datetime.today.month + 1
+            month_number = datetime.today().month + 1
             year = datetime.today().isocalendar()[0]
             #print 'modify week first - year= {year} - week number= {week_number}'.format(year=year, week_number=week_number)
             

@@ -104,4 +104,8 @@ a.btn:hover {
  	height		: 50%;
  	margin		: auto;
  }
+ 
+ #id_email {
+	 size: 200;
+ }
     

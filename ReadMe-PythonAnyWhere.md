@@ -131,7 +131,6 @@ path is
 ## create the MySQL database
 follow pythonanywhere instructions
 
-
 ## check git remote
 (music-rungis) 16:06 ~/music-rungis (master)$ git remote -v
 origin  https://github.com/RobertPastor/music-rungis.git (fetch)
@@ -157,7 +156,6 @@ Fast-forward
  rename README.md => ReadMe-Heroku.md (100%)
  create mode 100644 ReadMe-PythonAnyWhere.md
 (music-rungis) 16:07 ~/music-rungis (master)$ 
-
 
 # make migrations
 
@@ -209,7 +207,6 @@ Password (again):
 Superuser created successfully.
 (music-rungis) 16:11 ~/music-rungis (master)$ 
 
-
 ## go to the pythonanywhere web tab and reload the site .... It should be working now
 
 ## create the Studios and the Week days
@@ -229,7 +226,7 @@ vendredi
 
 ## create the Weekly reservations
 
-## set current directory to the projet folder
+## set current directory to the project folder
 
 go to the projet folder (the one containing the .git repo) -> the prompt shows the git branch master
 

@@ -5,7 +5,7 @@ Created on 15 oct. 2022
 '''
 
 import locale
-from datetime import datetime , timedelta, date
+from datetime import datetime 
 
 from django.core import serializers
 from django.contrib.auth.decorators import login_required
