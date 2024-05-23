@@ -38,6 +38,10 @@ class VersionsList(object):
     
     def fill(self):
         
+        version = Version(version_name='Version 4.4' , version_date='23th May 2024', 
+                          change_rationale=''' Django 3.2 and delete old reservations schedules tasks ''')
+        self.add(version)
+        
         version = Version(version_name='Version 4.3' , version_date='31st October 2022', 
                           change_rationale=''' Hours start from 7 to 19 minutes step by 5 minutes ''')
         self.add(version)

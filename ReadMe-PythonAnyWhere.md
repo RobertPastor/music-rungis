@@ -32,6 +32,13 @@ Installing collected packages: typing-extensions, asgiref, django
 Successfully installed asgiref-3.7.2 django-3.2 typing-extensions-4.7.1
 (music-rungis) 17:02 ~ $ 
 
+##  perform collectstatic
+
+(music-rungis) 17:33 ~/music-rungis (master)$ python manage.py ollectstatic
+linux-5.15.0-1044-aws-x86_64-with-debian-bullseye-sid
+206 static files copied to '/home/MusicRungis/music-rungis/gettingstarted/staticfiles'.
+(music-rungis) 17:33 ~/music-rungis (master)$
+
 ## Clone 
 
 14:06 ~ $ git clone https://github.com/RobertPastor/music-rungis.git
