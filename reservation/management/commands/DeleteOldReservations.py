@@ -9,6 +9,9 @@ import datetime
 from django.core.management.base import BaseCommand
 from reservation.models import  Reservation
 
+''' to be used in a python anywhere task '''
+''' cd $HOME && source .virtualenvs/music-rungis/bin/activate && cd music-rungis && python manage.py DeleteOldReservations '''
+
 class Command(BaseCommand):
     help = 'delete old reservations'
 

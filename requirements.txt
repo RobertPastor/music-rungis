@@ -1,7 +1,20 @@
-Django==2.2
-gunicorn==19.4.5
-psycopg2==2.8.3
-whitenoise==5.0.1
-pytz==2019.2
-xlsxwriter==1.2.8
-dj-database-url==0.5.0
+## on the PythonAnyWhere console with the virtual environment activated
+## in the deployment environment, we use a mySqlClient
+
+(music-rungis) 15:05 ~/music-rungis (master)$ pip freeze
+asgiref==3.7.2
+Django==3.2
+mysqlclient==2.1.1
+pytz==2022.4
+sqlparse==0.4.3
+typing_extensions==4.7.1
+whitenoise==6.2.0
+XlsxWriter==3.0.3
+(music-rungis) 15:06 ~/music-rungis (master)$ 
+
+## python version
+
+(music-rungis) 15:06 ~/music-rungis (master)$ python --version
+Python 3.7.13
+(music-rungis) 15:08 ~/music-rungis (master)$ 
+

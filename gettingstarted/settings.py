@@ -18,7 +18,6 @@ import platform
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -49,6 +48,7 @@ INSTALLED_APPS = (
 # 8 Mai 2016 - add internationalisation support
 ''' python 2 to python 3 and whitenoise upgrade to version 5.0.1 '''
 ''' delete   'django.contrib.auth.middleware.SessionAuthenticationMiddleware', '''
+
 MIDDLEWARE = (
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -82,10 +82,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 ''' migrate to MySQL - 28th September 2022 '''
+''' MySQL is the default django database in PythonAnyWhere '''
 
 
 DATABASES = {
@@ -96,7 +96,6 @@ DATABASES = {
         'PASSWORD': 'bobby1xx',
         'HOST': 'localhost',
         'PORT': '5432',
-        
     },
     'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -163,7 +162,6 @@ USE_TZ = True
 
 DEFAULT_CHARSET = 'utf-8'
 
-
 # Update database configuration with $DATABASE_URL.
 #db_from_env = dj_database_url.config(conn_max_age=500)
 #DATABASES['default'].update(db_from_env)
@@ -188,6 +186,7 @@ STATICFILES_DIRS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 #STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 ''' python 2 to python 3 and whitenoise upgrade to version 5.0.1 '''
 #STATICFILES_STORAGE = 'whitenoise.django.CompressedManifestStaticFilesStorage'
 

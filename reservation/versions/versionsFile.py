@@ -35,8 +35,10 @@ class VersionsList(object):
     def first(self):
         return self.versionsList[0]
     
-    
     def fill(self):
+        version = Version(version_name='Version 4.5' , version_date='12th August 2026', 
+                          change_rationale=''' add How to add a new user ''')
+        self.add(version)
         
         version = Version(version_name='Version 4.4' , version_date='23th May 2024', 
                           change_rationale=''' Django 3.2 and delete old reservations schedules tasks ''')
