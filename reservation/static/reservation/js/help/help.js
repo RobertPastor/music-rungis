@@ -137,18 +137,19 @@ function Help () {
 		
 		this.helpArray.push("La première étape de la création permet de fournir le nom de l'utilisateur (login) et le mot de passe du nouvel utilisateur. <br>");
 		this.helpArray.push("Le mot de passe doit être fourni une deuxième fois. <br>");
-		this.helpArray.push("Cliquer sur 'Enregistrer et Continuer les modifications' pour terminer la création du nouvel utilisateur. <br>");
+		this.helpArray.push("Cliquer sur 'Enregistrer et Continuer les modifications' pour terminer la première étape de la création du nouvel utilisateur. <br>");
 
-		this.helpArray.push("Dans la section 'Informations personnelles', fournir le Nom (peut-être différent du login fourni en premier), le prénom et l'adresse électronique. <br>");
-		this.helpArray.push("Attention : il est recommandé de fournir une adresse électronique privée et non pas une adresse électronique (email) en thalesgroup. <br>");
-		this.helpArray.push("Si le nouvel utilisateur est amené à exercer des fonctions d'administration, alors cocher la case STATUT EQUIPE. <br>");
+		this.helpArray.push("Dans la section 'Informations personnelles', fournir le nom (peut-être différent du login fourni en premier), le prénom et l'adresse électronique. <br>");
+		this.helpArray.push("Attention : il est recommandé de fournir une adresse électronique privée et non pas une adresse électronique en thalesgroup. <br>");
+		this.helpArray.push("Si le nouvel utilisateur est amené à exercer des fonctions d'administration, alors il faudra cocher la case STATUT EQUIPE. <br>");
 
-		this.helpArray.push("Ajouter le nouvel utilisateur au groupe 'simple user' pour lui attribuer les permissions de gestion des réservations et d'échange de partitions. <br>");
+		this.helpArray.push("Ajouter le nouvel utilisateur au groupe 'simple user' pour lui attribuer les permissions basiques de gestion des réservations et d'échange de partitions. <br>");
 		this.helpArray.push("Ajouter le nouvel utilisateur au groupe 'Comzik Staff' pour lui attribuer les permissions des administrateurs. <br>");
 		
 		this.helpArray.push("En lieu et place d'une affectation à un groupe, il est possible d'attribuer des permissions dans la liste des permissions disponibles. <br>");
 		this.helpArray.push("Attention : ne pas oublier d'utiliser les petites flèches pour transférer un groupe ou une permission à un utilisateur. <br>");
 		this.helpArray.push("Conclusion : un groupe ou une permission est assigné lorsqu'il apparait dans la partie 'droite' des choix effectués. <br>");
+		this.helpArray.push("NB : toute la gestion des utilisateurs et de leurs permissions est décrite dans la documentation en ligne du framework Django. <br>");
 
 	};
 
