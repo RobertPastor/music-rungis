@@ -32,12 +32,7 @@ Installing collected packages: typing-extensions, asgiref, django
 Successfully installed asgiref-3.7.2 django-3.2 typing-extensions-4.7.1
 (music-rungis) 17:02 ~ $ 
 
-##  perform collectstatic
 
-(music-rungis) 17:33 ~/music-rungis (master)$ python manage.py ollectstatic
-linux-5.15.0-1044-aws-x86_64-with-debian-bullseye-sid
-206 static files copied to '/home/MusicRungis/music-rungis/gettingstarted/staticfiles'.
-(music-rungis) 17:33 ~/music-rungis (master)$
 
 ## Clone 
 
@@ -52,13 +47,22 @@ Resolving deltas: 100% (42/42), done.
 Updating files: 100% (159/159), done.
 14:11 ~ $ 
 
+## set the current directory to the newly create "music-rungi" folder
+
+##  perform collectstatic
+
+(music-rungis) 17:33 ~/music-rungis (master)$ python manage.py collectstatic
+linux-5.15.0-1044-aws-x86_64-with-debian-bullseye-sid
+206 static files copied to '/home/MusicRungis/music-rungis/gettingstarted/staticfiles'.
+(music-rungis) 17:33 ~/music-rungis (master)$
+
 ## Check your python version in the local environment
 
 PS C:\Users\rober> python --version
 Python 3.7.7
 PS C:\Users\rober> django --version
 
-## Create a virtual environment with the appropriate Python version
+## Create a virtual environment with the appropriate Python version -> here python 3.7 (available on PythonAnyWhere)
 
 14:11 ~ $ mkvirtualenv music-rungis --python=/usr/bin/python3.7
 
@@ -78,6 +82,8 @@ virtualenvwrapper.user_scripts creating /home/MusicRungis/.virtualenvs/music-run
 (music-rungis) 14:13 ~ $ python --version
 Python 3.7.13
 (music-rungis) 14:13 ~ $ 
+
+## activate the virtual environment -> check (music-rungis) tag added to the prompt
 
 ## Check Django version in your local environment
 
