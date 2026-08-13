@@ -1,39 +1,56 @@
 
-## set the current directory having the git repository cloned from github
-## (master) within parenthesis provides de name of the current git branch
+## launch GitBash
 
-$ pwd
-/c/Users/rober/git/music-rungis
-rober@RobertPastor MINGW64 ~/git/music-rungis (master)
-$
+rober@RobertPastor MINGW64 ~
+$ 
 
-## check the content
+## set the current repository to one level above the clone
 
-$ ls -al
-total 62
-drwxr-xr-x 1 rober 197609     0 Aug 12 16:49 ./
+$ cd "C:\Users\rober\git"
+
+rober@RobertPastor MINGW64 ~/git
+$ 
+
+## clone the github repository
+
+$ git clone https://github.com/RobertPastor/music-rungis.git
+
+## check the newly created repository
+
+$ ls -al music-rungis/
+total 68
+drwxr-xr-x 1 rober 197609     0 Aug 12 20:54 ./
 drwxr-xr-x 1 rober 197609     0 Aug  6 12:32 ../
-drwxr-xr-x 1 rober 197609     0 Aug 12 15:51 .git/
--rw-r--r-- 1 rober 197609    76 Mar  3  2024 .gitignore
+drwxr-xr-x 1 rober 197609     0 Aug 13 09:37 .git/
+-rw-r--r-- 1 rober 197609   124 Aug 12 17:11 .gitignore
 -rw-r--r-- 1 rober 197609   440 Mar  3  2024 .project
 -rw-r--r-- 1 rober 197609   954 Mar  3  2024 .pydevproject
 drwxr-xr-x 1 rober 197609     0 Mar  3  2024 .settings/
--rw-r--r-- 1 rober 197609    48 Mar  3  2024 Procfile
--rw-r--r-- 1 rober 197609    46 Mar  3  2024 Procfile.windows
--rw-r--r-- 1 rober 197609     0 Aug 12 16:49 ReadMe-Development.md
+-rw-r--r-- 1 rober 197609  5990 Aug 13 17:55 ReadMe-Development.md
 -rw-r--r-- 1 rober 197609  1262 Mar  3  2024 ReadMe-Heroku.md
--rw-r--r-- 1 rober 197609   170 Apr 17 17:47 ReadMe-PostGres.md
+-rw-r--r-- 1 rober 197609   216 Aug 12 22:12 ReadMe-PostGres.md
 -rw-r--r-- 1 rober 197609 13917 May 23  2024 ReadMe-PythonAnyWhere.md
 -rw-r--r-- 1 rober 197609   303 Mar  3  2024 app.json
 drwxr-xr-x 1 rober 197609     0 Mar  3  2024 gettingstarted/
 drwxr-xr-x 1 rober 197609     0 Mar  3  2024 hello/
 -rwxr-xr-x 1 rober 197609   267 Mar  3  2024 manage.py*
 drwxr-xr-x 1 rober 197609     0 Mar  3  2024 partitions/
--rw-r--r-- 1 rober 197609   122 Mar  3  2024 requirements.txt
+-rw-r--r-- 1 rober 197609   533 Aug 12 21:06 requirements.txt
 drwxr-xr-x 1 rober 197609     0 Mar  3  2024 reservation/
 -rw-r--r-- 1 rober 197609    14 Mar  3  2024 runtime.txt
+drwxr-xr-x 1 rober 197609     0 Aug 12 16:54 virtualEnv/
 -rw-r--r-- 1 rober 197609   449 Mar  3  2024 wsgi.py
 
+rober@RobertPastor MINGW64 ~/git
+$
+
+## set the current directory having the git repository cloned from github
+## (master) within parenthesis provides de name of the current git branch
+
+$ cd "music-rungis"
+
+$ pwd
+/c/Users/rober/git/music-rungis
 rober@RobertPastor MINGW64 ~/git/music-rungis (master)
 $
 
@@ -57,7 +74,7 @@ rober@RobertPastor MINGW64 ~/git/music-rungis (master)
 $
 
 ## activate the virtual environment in windows use GitBash shell
-## check the activation with the (virtualEnv) tag within parenthesis
+## check the correct activation with the (virtualEnv) tag provided within parenthesis
 
 $ . ./virtualEnv/Scripts/activate
 (virtualEnv)
@@ -112,7 +129,7 @@ Successfully installed whitenoise-6.2.0
 rober@RobertPastor MINGW64 ~/git/music-rungis (master)
 
 ## try to run the django development server
-## using localhost and default 8000 port
+## using localhost (127.0.0.1) and the default 8000 port
 
 python manage.py runserver
 

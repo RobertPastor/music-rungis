@@ -122,24 +122,25 @@ function Help () {
 		htmlContent += " - situé dans le bandeau supérieur - pour générer un fichier EXCEL (au format 2003) contenant les réservations de la semaine visualisée (ou du mois visualisé).<br>";
 		this.helpArray.push(htmlContent);
 
-		this.helpArray.push("<h3>Ajout d'un utilisateur</h3>");
+		this.helpArray.push("<h3>Ajout d'un utilisateur (pour les administrateurs du site uniquement)</h3>");
 
-		this.helpArray.push("Tout membre du staff a la possibilité d'ajouter un nouvel utilisateur au site. <br>");
-		this.helpArray.push("L'ajout s'effectue au travers du site d'administration. <br>");
+		this.helpArray.push("Tout membre du staff (administrateur du site) a la possibilité d'ajouter un nouvel utilisateur au site. <br>");
+		this.helpArray.push("L'ajout s'effectue au travers du site d'administration généré par Django. <br>");
 		this.helpArray.push("Seuls les administrateurs voient le lien vers le site d'administration. <br>");
 		this.helpArray.push("Dans le site d'administration, dans la section 'Authentification et autorisation', cliquer sur Utilisateurs. <br>");
 		this.helpArray.push("Découvrir la liste des utilisateurs du site. <br>");
 
-		htmlContent = "Les utilisateurs ayant le statut 'STATUT EQUIPE' avec une case cochée ";
+		htmlContent = "Les utilisateurs ayant le statut 'STATUT EQUIPE' avec une case cochée comme dans l'image suivante ";
 		htmlContent += ' <img src="/static/reservation/images/ticked-box.png" style="width:24px;height:24px;border:0" >';
 		htmlContent += " peuvent ajouter un utilisateur. <br>";
 		this.helpArray.push(htmlContent);
 		
 		this.helpArray.push("La première étape de la création permet de fournir le nom de l'utilisateur (login) et le mot de passe du nouvel utilisateur. <br>");
 		this.helpArray.push("Le mot de passe doit être fourni une deuxième fois. <br>");
+		this.helpArray.push("Le mot de passe doit être accepté par Django. <br>");
 		this.helpArray.push("Cliquer sur 'Enregistrer et Continuer les modifications' pour terminer la première étape de la création du nouvel utilisateur. <br>");
 
-		this.helpArray.push("Dans la section 'Informations personnelles', fournir le nom (peut-être différent du login fourni en premier), le prénom et l'adresse électronique. <br>");
+		this.helpArray.push("Dans la section 'Informations personnelles', fournir le nom de l'utilisateur (peut-être différent du login fourni en premier), le prénom et l'adresse électronique. <br>");
 		this.helpArray.push("Attention : il est recommandé de fournir une adresse électronique privée et non pas une adresse électronique en thalesgroup. <br>");
 		this.helpArray.push("Si le nouvel utilisateur est amené à exercer des fonctions d'administration, alors il faudra cocher la case STATUT EQUIPE. <br>");
 
@@ -147,9 +148,10 @@ function Help () {
 		this.helpArray.push("Ajouter le nouvel utilisateur au groupe 'Comzik Staff' pour lui attribuer les permissions des administrateurs. <br>");
 		
 		this.helpArray.push("En lieu et place d'une affectation à un groupe, il est possible d'attribuer des permissions dans la liste des permissions disponibles. <br>");
-		this.helpArray.push("Attention : ne pas oublier d'utiliser les petites flèches pour transférer un groupe ou une permission à un utilisateur. <br>");
-		this.helpArray.push("Conclusion : un groupe ou une permission est assigné lorsqu'il apparait dans la partie 'droite' des choix effectués. <br>");
+		this.helpArray.push("Attention : ne pas oublier d'utiliser les petites flèches -> pour assigner un groupe ou une permission à un utilisateur. <br>");
+		this.helpArray.push("Conclusion : un groupe (ou une permission) est assigné lorsqu'il apparait dans la partie 'droite' des choix effectués. <br>");
 		this.helpArray.push("NB : toute la gestion des utilisateurs et de leurs permissions est décrite dans la documentation en ligne du framework Django. <br>");
+		this.helpArray.push("Pour information, la dernière version de Django installée (au 13 Août 2026) est la version 3.2. <br>");
 
 	};
 
